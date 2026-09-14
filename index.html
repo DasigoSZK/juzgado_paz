@@ -22,6 +22,8 @@
   <!-- Estilos compartidos -->
   <link rel="stylesheet" href="/styles.css">
 
+  <!-- Lógica de precios UT dinámica -->
+  <script src="/precios.js" defer></script>
 </head>
 <body>
 
@@ -60,11 +62,11 @@
                 <li><a class="dropdown-item fw-medium" href="/informacion-sumaria.html"><i class="bi bi-card-checklist me-2 text-primary"></i> Información Sumaria</a></li>
                 <li><a class="dropdown-item fw-medium" href="/autorizacion-simple.html"><i class="bi bi-person-check me-2 text-primary"></i> Autorización Simple</a></li>
                 <li><hr class="dropdown-divider my-1"></li>
-                <li><a class="dropdown-item text-muted" href="#catalogo-tramites"><i class="bi bi-bus-front me-2"></i> Autorización de Viaje (Interior)</a></li>
-                <li><a class="dropdown-item text-muted" href="#catalogo-tramites"><i class="bi bi-globe-americas me-2"></i> Autorización de Viaje (Exterior)</a></li>
-                <li><a class="dropdown-item text-muted" href="#catalogo-tramites"><i class="bi bi-file-earmark-text me-2"></i> Declaración Jurada</a></li>
-                <li><a class="dropdown-item text-muted" href="#catalogo-tramites"><i class="bi bi-briefcase me-2"></i> Poderes Generales/Especiales</a></li>
-                <li><a class="dropdown-item text-muted" href="#catalogo-tramites"><i class="bi bi-heart me-2"></i> Carta de Pobreza</a></li>
+                <li><a class="dropdown-item fw-medium" href="/autorizacion-viaje-interior.html"><i class="bi bi-bus-front me-2 text-primary"></i> Autorización de Viaje (Interior)</a></li>
+                <li><a class="dropdown-item fw-medium" href="/autorizacion-viaje-exterior.html"><i class="bi bi-globe-americas me-2 text-primary"></i> Autorización de Viaje (Exterior)</a></li>
+                <li><a class="dropdown-item fw-medium" href="/declaracion-jurada.html"><i class="bi bi-file-earmark-text me-2 text-primary"></i> Declaración Jurada</a></li>
+                <li><a class="dropdown-item fw-medium" href="/poderes-generales-especiales.html"><i class="bi bi-briefcase me-2 text-primary"></i> Poderes Generales/Especiales</a></li>
+                <li><a class="dropdown-item fw-medium" href="/carta-de-pobreza.html"><i class="bi bi-heart me-2 text-primary"></i> Carta de Pobreza</a></li>
               </ul>
             </li>
           </ul>
@@ -253,7 +255,7 @@
 
         <!-- Card 5: Autorización de Viaje (Interior) -->
         <div class="col-12 col-md-6 col-lg-4 tramite-card-col" data-search="autorizacion de viaje interior menores colectivo traslado transito interjurisdiccional">
-          <div class="tramite-card">
+          <a href="/autorizacion-viaje-interior.html" class="tramite-card">
             <div class="tramite-icon-box">
               <i class="bi bi-bus-front"></i>
             </div>
@@ -272,18 +274,18 @@
                 Ver requisitos e instructivo <i class="bi bi-arrow-right"></i>
               </span>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Card 6: Autorización de Viaje (Exterior) -->
         <div class="col-12 col-md-6 col-lg-4 tramite-card-col" data-search="autorizacion de viaje exterior migraciones menores frontera internacional aduana egreso">
-          <div class="tramite-card">
+          <a href="/autorizacion-viaje-exterior.html" class="tramite-card">
             <div class="tramite-icon-box">
               <i class="bi bi-globe-americas"></i>
             </div>
             <h3 class="tramite-title">Autorización de Viaje (Exterior)</h3>
             <p class="tramite-desc">
-              Autorización legal exigida por Migraciones para el egreso de niños, niñas y adolescentes hacia el...
+              Autorización legal exigida por Migraciones para el egreso de niños, niñas y adolescentes hacia el exterior...
             </p>
             <div class="tramite-footer">
               <div>
@@ -296,18 +298,18 @@
                 Ver requisitos e instructivo <i class="bi bi-arrow-right"></i>
               </span>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Card 7: Declaración Jurada -->
-        <div class="col-12 col-md-6 col-lg-4 tramite-card-col" data-search="declaracion jurada ingresos desempleo residencia afip anses estado manifestacion juramento">
-          <div class="tramite-card">
+        <div class="col-12 col-md-6 col-lg-4 tramite-card-col" data-search="declaracion jurada ingresos desempleo residencia afip anses estado manifestacion juramento beca uncaus moto">
+          <a href="/declaracion-jurada.html" class="tramite-card">
             <div class="tramite-icon-box">
               <i class="bi bi-file-earmark-text"></i>
             </div>
             <h3 class="tramite-title">Declaración Jurada</h3>
             <p class="tramite-desc">
-              Manifestación bajo juramento ante autoridad competente sobre ingresos, residencia, desempleo...
+              Manifestación bajo juramento ante autoridad competente sobre ingresos, residencia, desempleo o posesión...
             </p>
             <div class="tramite-footer">
               <div>
@@ -320,18 +322,18 @@
                 Ver requisitos e instructivo <i class="bi bi-arrow-right"></i>
               </span>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Card 8: Poderes Generales/Especiales -->
         <div class="col-12 col-md-6 col-lg-4 tramite-card-col" data-search="poderes generales especiales representacion juicios tramites administrativos cobro de beneficios">
-          <div class="tramite-card">
+          <a href="/poderes-generales-especiales.html" class="tramite-card">
             <div class="tramite-icon-box">
               <i class="bi bi-briefcase"></i>
             </div>
             <h3 class="tramite-title">Poderes Generales/Especiales</h3>
             <p class="tramite-desc">
-              Otorgamiento de representación para juicios, trámites administrativos, cobro de beneficios o...
+              Otorgamiento de representación para juicios, trámites administrativos, cobro de beneficios o mandatos...
             </p>
             <div class="tramite-footer">
               <div>
@@ -344,18 +346,18 @@
                 Ver requisitos e instructivo <i class="bi bi-arrow-right"></i>
               </span>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Card 9: Carta de Pobreza -->
         <div class="col-12 col-md-6 col-lg-4 tramite-card-col" data-search="carta de pobreza gratuidad exencion tributos vulnerabilidad beneficio litigar sin gastos tasas">
-          <div class="tramite-card">
+          <a href="/carta-de-pobreza.html" class="tramite-card">
             <div class="tramite-icon-box">
               <i class="bi bi-heart"></i>
             </div>
             <h3 class="tramite-title">Carta de Pobreza</h3>
             <p class="tramite-desc">
-              Constancia expedida a personas en situación de vulnerabilidad para gozar de exención en tributos y...
+              Constancia expedida a personas en situación de vulnerabilidad para gozar de exención en tributos judiciales...
             </p>
             <div class="tramite-footer">
               <div>
@@ -368,7 +370,7 @@
                 Ver requisitos e instructivo <i class="bi bi-arrow-right"></i>
               </span>
             </div>
-          </div>
+          </a>
         </div>
 
       </div>
@@ -455,9 +457,8 @@
   <!-- Bootstrap 5 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-  
-  <!-- Lógica de precios UT dinámica -->
-  <script src="/precios.js" defer></script>
+  <!-- Lógica dinámica de precios según el valor actual de la UT -->
+  <script src="/precios.js"></script>
 
   <!-- Script de Búsqueda y Filtrado en vivo -->
   <script>
