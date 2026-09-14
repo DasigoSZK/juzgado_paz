@@ -1,0 +1,280 @@
+Prompt para Web Juzgado:
+
+Deseo crear una página web sencilla basada en los trámites comunes del juzgado para repasar conceptos básicos de Javascript, html y css.
+
+La intención es que sea una página informativa para el público general, explicando los trámites básicos del juzgado de paz y sus requisitos como asi también sus precios.
+Luego la subiré a una "github pages" para que sea accesible para cualquier persona (no tendra backend así que debería ser sencillo).
+
+Sabiendo esto, y sabiendo que tu en este chat tienes mucha información cargada sobre los trámites del juzgado de paz, quiero que me ayudes a armar no solo la web en general, 
+sino también el prompt inicial para crear el diseño, este prompt se lo dare a "stitch" (ai de google) y luego lo pasaré a Google Ai Studio.
+
+Ahora que conoces mis intenciones, pasaré a describirte, con mis palabras, que quiero que incluya de manera general esta web del juzgado de paz, 
+y quisiera que tu me armes un prompt adecuado para stitch teniendo esta información.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+- Notas del funcionamiento del proyecto:
+
+1_Será una página con puro código frontend (finalmente estara en una github pages), sin backend.
+2_A pesar de ser puro código frontend, el código html de las cards de los trámites 
+(como las certificaciones de copias, certificaciones de firmas, informaciones sumarias, etcétera), 
+como así también los precios de los trámites, o los modelos de declaraciones juradas, y cualquier tipo de card informativa que pueda modificar su precio 
+o modificar su información de alguna manera se construira dinámicamente con javascript. 
+Específicamente, javascript hará solicitudes asincronas con fetch a una serie de archivos ".json" 
+locales que servirán como una "base de datos local", desde la cual yo podré modificar rápidamente los precios, o agregar nuevas tarjetas de los trámites 
+modificando únicamente los datos del json, que luego javascript se encargará de procesar y pintar en el html.
+Resumen práctico del funcionamiento: el código frontend se construirá dinámicamente con javascript, usando solicitudes fetch a archivos 
+".json" locales para obtener los datos (los datos de los archivos json, como precios o modelos de declaraciones las añadiré o modificaré yo manualmente periódicamente).
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+- Notas del diseño del proyecto:
+
+1_El proyecto esta destinado a personas con pocos o nulos conocimientos técnicos, a veces incluso pobres conocimientos sobre navegación en internet en general, 
+por lo que el diseño debe ser minimalista y visualmente sencillo, pero manteniendo un estilo moderno y serio para combinar con la estética gubernamental 
+al ser una web relacionada al juzgado.
+La prioridad debe ser facilitar visualmente el entendimiento de los trámites, sus requisitos, los precios y la información, sin cargar excesivamente de contenido.
+Resumen del diseño: minimalista pero elegante, estilo "apple", priorizando la legibilidad de la información y la navegación intuitiva.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+- Notas de la estructura/paginas de la web:
+
+Aquí pretendo describir las páginas de toda la web y el contenido de cada una de estas paginas.
+Al ser definiciones textuales, las notas de las páginas pueden ser modificadas o ampliadas según sea necesario.
+
+***********************************************
+
+0_Header y footer
+En todas las páginas se repetirá el mismo header y footer.
+
+El header será sencillo, tendrá un logo del juzgado de paz en la esquina izquierda, que a su vez será un link a la página principal (pagina 1).
+En la esquina derecha tendrá un desplegable llamado "trámites" que tendrá internamente links a los mismos trámites mencionados en las cards de la "pagina central (index)" 
+(certificaciones de copias, certificaciones de firmas, información sumaria, autorización simple, autorización de viaje (interior), 
+autorización de viaje (exterior), declaración jurada, poderes generales/especiales, carta de pobreza).
+
+Footer:
+Aquí tendrá información general como dirección del juzgado de paz con link a google maps, números de teléfono del juzgado de paz y una muy pequeña nota/copyright 
+del autor del sitio ("Dasigo Leandro Szkamarda").
+
+
+***********************************************
+
+1_Pagina central (index):
+
+Esta página empezará con una "hero image" con una imagen real del juzgado de paz (puede usarse una plantilla y yo la modificaré luego) junto a un titulo 
+"Juzgado de Paz - Presidencia Roque Sáenz Peña".
+
+Justo debajo de la hero image, tendrá un muy breve "texto descriptivo" que explique el propósito de esta página web 
+(ej. "Esta es una página web no oficial del juzgado de paz elaborada con el único fin de informar a los habitantes de la localidad de 
+Presidencia Roque Sáenz Peña sobre los requisitos y/o procedimientos de los trámites comúnmente realizados en la institución").
+
+Debajo de este texto descriptivo aclaratorio, habrá un leve separador y empezará el contenido principal de la página.
+
+Contenido principal de la página index:
+Empezará con 1 texto central grande que diga "1 U.T. = $16" (es decir, el valor de 1 unidad tributaria, coloqué $16 pesos por ser el valor actual, 
+pero es uno de los datos que podrá cambiar periódicamente y se debe poder actualizar desde los archivos json).
+Justo debajo, en letras pequeñas, un texto aclaratorio de que "UT" significa "unidad tributaria " y que es solo una unidad que permite calcular y/o actualizar 
+los precios de todos los trámites.
+
+Debajo de este texto central de "UT", irá la grilla de "cards" de cada trámite común realizado en el juzgado.
+Lista de cards actual (expandible desde archivo json):
+1_Certificaciones de copias
+2_Certificaciones de Firmas (general)
+3_Información Sumaria
+4_Autorizacion Simple
+5_Autorizacion de Viaje (interior del país)
+6_Autorizacion de Viaje (exterior del país)
+7_Declaración Jurada
+8_Poderes Generales / Especiales
+9_Carta de Pobreza
+
+Estructura de cada card:
+Las cards tendrán una imagen minimalista alusiva al trámite en cuestión, debajo el título del trámite y debajo del título el precio del trámite 
+(expresado en "UT" y en pesos, ejemplo: '100UT = $1.600').
+Inicialmente no tendrán mas información, ya que cada card sera un link clickeable que lleve al usuario a la página específica de ese trámite donde 
+tendrá mas información del procedimiento, precios y requisitos del mismo.
+Sería prudente, por este motivo, que cada card tenga una animación sutil que le permita al usuario saber que la card es clickeable.
+
+
+***********************************************
+
+2_Pagina "certificación de copias"
+
+Esta página sera corta y sencilla.
+Empezará mostrando en grande el precio de 1 copia (100 UT = $1.600) y luego un primer texto que explique el propósito de certificar una copia 
+(entregar una copia certificada a un tercero, para no tener que entregar el original).
+
+Un par de saltos de línea posteriores tendrán un segundo texto que explicará los requisitos para que una copia sea certificada 
+(traer el documento original y su copia, aclarando que en el juzgado de paz no se hacen copias).
+
+Luego del segundo texto habrá una imagen sencilla que ejemplifique el procedimiento, mostrando un documento original, y a su lado, una copia con 
+una estampilla roja del juzgado de paz (puede ser una imagen dummy que yo posteriormente rellene con una real).
+
+Luego de unos saltos de línea posteriores habrá un tercero texto breve que aclaré que los títulos secundarios, terciarios o universitarios 
+deben pasar previamente por el sello de ATP (administración tributaria provincial) antes de poder ser certificados.
+Justo debajo de este texto habrá un link a Google maps con la dirección de ATP en Presidencia Roque Sáenz Peña.
+
+Al final de la página se repite el "pie de página" de la página principal.
+
+***********************************************
+
+3_Pagina "certificacion de firmas (general)"
+
+La página empezará mostrando el precio (1 firma = 200 UT = $3.200).
+
+Luego, debajo, un texto que explique que hay muchos tipos de certificaciones de firmas (poderes para juicio, contratos de compra venta, comodatos, etcétera) 
+pero que los requisitos básicos se repiten para todos.
+
+Luego habrá un segundo texto que explique los requisitos generales (1, documento DNI físico o desde la aplicación "Mi Argentina", 
+pero no copia ni foto, luego 2, que la persona sea mayor de edad, 3 que la persona tenga domicilio en presidencia Roque Sáenz peña, 
+4 que la persona este totalmente consciente de sus actos, no se le puede tomar la firma a una persona con síndrome de down, alcoholizada, 
+o similares, 5 que la firma se realicé presencialmente frente al personal del juzgado de paz, no pudiendo traer documentos ya firmados).
+
+Debajo de este texto de requisitos, irá una imágen sencilla que ayude a entender estos requisitos (foto de dni y dni digital de Mi Argentina, 
+una foto que ejemplifique el domicilio en presidencia Roque Sáenz peña y alguna foto alusiva a estar mentalmente consciente y capaz).
+
+***********************************************
+
+4_Pagina "información sumaria"
+
+Esta página empezará con el precio de la información sumaria (1 información sumaria = 750 UT = $12.000).
+
+Justo debajo del precio tendrá un texto aclaratorio que dirá que aquellas informaciones sumarias que se realicen con el fin de ser 
+entregadas en ANSES están exentas del pago.
+
+Luego tendrá un texto que describa que hay varios tipos de información sumarias y luego listará ejemplos de las mas comunes 
+(información sumaria "de mejoras", "concubinato", "desvinculación", "concubinato post mortem", "familiar a cargo", "residencia".
+
+Unos saltos de línea posteriores tendrá otro texto con los requisitos generales de toda información sumaria 
+(1 certificado de domicilio policial, 2 testigos no familiares con dni en mano y domicilio en Sáenz Peña).
+
+Justo debajo de los requisitos habrá una imagen que ayude a ejemplificar los requisitos (imagen de certificado de domicilio policial, 
+y de 2 personas con dni que hagan referencia a los testigos).
+
+Luego tendrá un segundo listado de "requisitos adicionales especiales" que tendrá requisitos extras requeridos para ciertas informaciones sumarias especificas 
+(Copia de acta de nacimiento de cada menor en familiar a cargo, copia de defunción del concubino/a en concubinato postmortem).
+
+Al final de esta página previo al pie de página habrá un aviso que diga "No se realizan informaciones sumarias sin certificado de domicilio y/o DNI sin excepción).
+
+***********************************************
+
+5_Pagina "Autorización Simple"
+
+Empezará con el precio de la autorización simple (1 autorización simple = 200 UT = $3.200).
+
+Luego de esto habrá un breve texto aclaratorio que explique que este tipo de autorizaciones son válidas únicamente para trámites administrativos simples, 
+como "autorizar a un tercero a retirar a menores de edad de un colegio" o "autorizar a un tercero a retirar títulos/trámites ante una institución x en su nombre".
+
+Posterior a eso tendra una imagen dummy que yo luego reemplazare con una imagen real del formulario de autorización simple, 
+esta imagen a su vez será un link que permita descargar el modelo de autorización simple en formato PDF.
+
+Posterior a esta imagen tendra un texto de los requisitos que es únicamente tener DNI físico o digital desde la aplicación Mi Argentina.
+
+Unos saltos de línea posteriores tendrá un texto que aclare que la autorización debe realizarse obligatoriamente con nuestro formulario 
+y debe firmarse presencialmente ante el personal del juzgado de paz.
+
+***********************************************
+
+6_Pagina "autorización de viaje (interior del país)"
+
+La página empezará con un texto con el precio de una autorización de viaje al interior del pais (1 autorización = 100 UT = $1.600).
+
+Unos saltos de línea posteriores tendrá un texto que una autorización de viaje es un formulario que le permite a un menor de edad (menor de 18 años) 
+viajar acompañado por un tercero o solo pero recepcionado en el destino por un tercero, bajo la autorización de 1 de los padres.
+
+Unos saltos de línea posteriores habrá un segundo texto con los requisitos (acta de nacimiento actualizada del menor, 
+considerándose actualizada si se realizó en los últimos 6 meses, además de esto el dni y firma de 1 de los padres que autorizará el viaje, 
+junto a los datos del tercero que lo acompaña, como nombre completo, dni, domicilio y teléfono).
+
+Luego de este segundo texto habrá una imagen del formulario de la autorización de viaje que otorgamos en el juzgado de paz, 
+que a su vez será un link para descargar el formulario en formato pdf.
+
+Unos saltos de línea posteriores a la imagen habrá un texto aclaratorio final que diga que un padre no puede autorizarse 
+a si mismo a acompañar al menor, debe autorizar al otro padre o a un tercero.
+
+***********************************************
+
+7_Pagina "autorización de viaje (exterior del país)"
+
+La página empezará con un texto que diga el precio final de la autorización de viaje al exterior (1 autorización de viaje = 400 - 600 UT = $9600 - $12.800)
+Justo debajo del precio irá un breve texto aclaratorio indicando que este rango de precio depende de si autorizan 2 o 1 padre 
+(aclarando también que la firma de 1 solo padre en viajes al exterior solo es posible si en el acta de nacimiento figura también 1 único padre).
+
+Unos saltos de línea posteriores habra un breve texto que explique que la autorización de viaje al exterior es un documento que habilita a un menor a viajar 
+acompañado de un tercero a otro pais bajo la autorización de ambos padres.
+
+Unos saltos de línea posteriores habrá un texto de los requisitos de la autorización de viaje al exterior (acta de nacimiento actualizada del menor, 
+considerándose actualizada si se realizó en los últimos 6 meses, dni carnet o desde mi argentina de ambos padre, o 1 solo padre si en el 
+acta de nacimiento asi figura, ademas de esto también requiere datos del tercero que acompaña, como nombre completo, dni, teléfono y domicilio).
+
+Justo debajo de este texto habrá una imagen con el formulario de la autorización de viaje al exterior que a su vez será un link para descargar 
+el formulario en formato pdf.
+
+***********************************************
+
+8_Pagina "declaración jurada"
+
+La página empieza con el precio de una declaración jurada (1 declaración jurada = 200 UT = $3.200).
+
+Unos saltos de línea posteriores habrá un texto aclaratorio que explique que una declaración jurada es un documento que certifica que 
+realmente una persona dijo o declaro algo, pero que el juzgado de paz no es responsable de lo que esta declare ni tiene la obligacion de indicarle que declarar, 
+sino que esta debe saber qué es lo que quiere declarar.
+
+Unos saltos de línea posteriores estará el texto de requisitos de una declaración jurada (dni carnet o digital desde Mi Argentina y ser mayor de 18 años).
+Justo debajo habrá una imagen con el modelo de formulario de declaración jurada del juzgado de paz que a su vez será un link 
+para descargar el formulario en formato pdf.
+
+Unos saltos de línea posteriores habrá otro texto que reitere que, a pesar de que la persona debe saber que es lo que desea declarar 
+y que el juzgado de paz no puede elaborar la declaración por la persona, se le deja a continuación un listado de modelos de declaraciones 
+que se suelen realizar para trámites comunes del juzgado de paz, mas no es obligación utilizarlos o seguirlos al pie de la letra.
+
+A continuación de este texto habrá una serie de "acordeones" (elementos "details" y "summary" html) que tendrán 1 titulo 
+(que se verá antes de abrir el elemento details) y al abrirlo el summary mostrara entre comillas el modelo de declaración 
+(ej.  de titulo "Declaración jurada de familiar a cargo", ejemplo de contenido "declaro bajo juramento de ley que tengo a mi cargo 
+y cuidado a ......, DNI: ....... por motivos de salud y/o enfermedad".).
+Aclaración: esta lista de acordeones (elementos details y summary) serán construidos dinámicamente con javascript, 
+consumiendo los datos de un archivo local ".json" que yo cargaré y/o modificaré regularmente.
+
+***********************************************
+
+9_Pagina "poderes generales/especiales"
+
+La página empezara con el precio de un poder (1 firma = 200 UT = $3.200) y un texto aclaratorio debajo indicando que el precio puede ser mayor 
+si el poder incluye mas de 1 firmante.
+
+Unos saltos de línea posteriores habra un texto que explique en el juzgado de paz no se admiten poderes para juicios penales, relacionados a familia, 
+o a otros fueros del derecho.
+Y que en el juzgado de paz solo se admiten poderes generales y/o poderes especiales exclusivamente para sucesorios que tramitan en el juzgado de paz.
+
+Unos saltos de línea posteriores estará el texto con los requisitos (dni carnet o digital desde Mi Argentina, ser mayor de 18 años).
+Justo debajo habrá una imagen de un modelo de "poder general" recomendado por el juzgado de paz que a su vez será un link 
+para descargar dicho modelo en formato pdf.
+
+***********************************************
+
+10_Pagina "carta de pobreza"
+
+Empezará con un texto que indique el precio ($0 pesos, es justamente para aclarar que el trámite esta exento de pago).
+
+Unos saltos de línea posteriores habrá un texto que explique que una carta de pobreza es un trámite que se realiza frente a la defensoría oficial, 
+para que este le otorgue un abogado gratuito para tramitar un juicio.
+
+Unos saltos de línea posteriores habrá otro texto que aclaré que en el juzgado de paz no se tramitan cartas de pobreza para juicios de familia.
+
+
+Unos saltos de linea posteriores habrá un texto con los requisitos (datos del recurrente, del causante, y de 2 testigos no familiares con 
+domicilio en Sáenz Peña) junto a una imagen del formulario de la carta de pobreza que será a su vez un link para descargar el formulario en formato pdf
+
+***********************************************
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+

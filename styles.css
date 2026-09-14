@@ -1,0 +1,842 @@
+/* ==========================================================================
+   ESTILOS COMPARTIDOS - JUZGADO DE PAZ LETRADO (PRESIDENCIA ROQUE SÁENZ PEÑA)
+   Colores institucionales, tipografía Inter, ajustes de cards y componentes
+   ========================================================================== */
+
+:root {
+  --jp-navy: #1d4363;
+  --jp-navy-dark: #143048;
+  --jp-navy-subbar: #14324c;
+  --jp-navy-footer: #122b40;
+  --jp-blue-secondary: #006399;
+  --jp-blue-accent: #0284c7;
+  --jp-blue-light: #e0f2fe;
+  --jp-blue-soft: #f0f7ff;
+  --jp-bg-page: #f8fafc;
+  --jp-bg-card: #ffffff;
+  --jp-border: #e2e8f0;
+  --jp-text-primary: #0f172a;
+  --jp-text-secondary: #475569;
+  --jp-text-muted: #64748b;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--jp-bg-page);
+  color: var(--jp-text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* ==========================================================================
+   HEADER Y NAVEGACIÓN INSTITUCIONAL
+   ========================================================================== */
+.navbar-institucional {
+  background-color: var(--jp-navy);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.brand-icon-box {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cde5ff;
+  flex-shrink: 0;
+}
+
+.brand-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.brand-subtitle {
+  font-size: 0.78rem;
+  color: #a6caf0;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.nav-link-custom {
+  color: #ffffff !important;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem !important;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-link-custom:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.nav-link-custom.active {
+  background-color: #002d4b;
+  font-weight: 600;
+}
+
+.dropdown-menu-custom {
+  border: 1px solid var(--jp-border);
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(29, 67, 99, 0.12);
+  padding: 0.5rem 0;
+  min-width: 260px;
+}
+
+.dropdown-menu-custom .dropdown-item {
+  font-size: 0.88rem;
+  padding: 0.55rem 1.2rem;
+  color: var(--jp-text-primary);
+  transition: all 0.15s ease;
+}
+
+.dropdown-menu-custom .dropdown-item:hover {
+  background-color: #eff6ff;
+  color: var(--jp-blue-secondary);
+  padding-left: 1.4rem;
+}
+
+/* Sub-barra de navegación para páginas de trámite */
+.nav-subbar {
+  background-color: var(--jp-navy-subbar);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.55rem 0;
+  font-size: 0.82rem;
+}
+
+.nav-subbar a {
+  color: #cde5ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.nav-subbar a:hover {
+  color: #ffffff;
+}
+
+.badge-presencial {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #cde5ff;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+}
+
+/* ==========================================================================
+   HERO BANNER
+   ========================================================================== */
+.hero-judicial {
+  position: relative;
+  background-color: #0d2133;
+  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAlsJB25ooJbbYUuwcTLJhhJjIGYT_7ncR_QIFH7myE6hEhnpMzo_brYoxjMIDEUhHy-qoiaC_RiPrAVfFVsvS6C8nA4y4cidhqWX9lQHKn9wO6cQGqkRUAo7vzR-gKG_q2Qwd3O7evfZ-NrjWwYd0QvRt1DTERb8-Q5LrYTZauur6dXttJ6Njg1MTYPXZIfJ5b91N2EZaBm6dCvUPT95TaWk7IbPRw-VNNyVLrdhO-DICRdQzAWL8X');
+  background-size: cover;
+  background-position: center 30%;
+  color: #ffffff;
+  overflow: hidden;
+  padding: 3.5rem 0 3.2rem 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14, 34, 52, 0.88) 0%, rgba(29, 67, 99, 0.92) 60%, rgba(29, 67, 99, 0.98) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #cde5ff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  backdrop-filter: blur(4px);
+  margin-bottom: 0.9rem;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.02rem;
+  color: #cde5ff;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767.98px) {
+  .hero-judicial {
+    padding: 2.2rem 0 2.2rem 0;
+  }
+  .hero-title {
+    font-size: 1.6rem;
+  }
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+/* ==========================================================================
+   CARDS DE INFORMACIÓN, DESCARGO Y UNIDAD TRIBUTARIA
+   ========================================================================== */
+.card-disclaimer {
+  background-color: #f0f7ff;
+  border: 1px solid #c7dcf5;
+  border-radius: 12px;
+  padding: 1.1rem 1.3rem;
+  color: #1e3a5f;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  box-shadow: 0 1px 4px rgba(29, 67, 99, 0.04);
+}
+
+.card-disclaimer-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.card-ut {
+  background-color: #ffffff;
+  border: 1px solid var(--jp-border);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(29, 67, 99, 0.04);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-ut:hover {
+  box-shadow: 0 6px 16px rgba(29, 67, 99, 0.08);
+}
+
+.ut-display {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--jp-navy);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.ut-icon-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #e0f2fe;
+  color: #0369a1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.ut-desc {
+  font-size: 0.83rem;
+  color: var(--jp-text-muted);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   BUSCADOR EN VIVO
+   ========================================================================== */
+.search-wrapper {
+  position: relative;
+}
+
+.search-icon-inside {
+  position: absolute;
+  top: 50%;
+  left: 1.1rem;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  pointer-events: none;
+  font-size: 1.15rem;
+}
+
+.search-input-custom {
+  height: 48px;
+  padding-left: 2.9rem;
+  padding-right: 1.2rem;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.92rem;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.search-input-custom:focus {
+  border-color: var(--jp-blue-secondary);
+  box-shadow: 0 0 0 3px rgba(3, 105, 161, 0.18);
+  outline: none;
+}
+
+/* ==========================================================================
+   GRILLA DE TRÁMITES (CATÁLOGO EN INDEX)
+   ========================================================================== */
+.section-header-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--jp-navy);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.2rem;
+}
+
+.section-header-sub {
+  font-size: 0.85rem;
+  color: var(--jp-text-muted);
+}
+
+.badge-tramite-count {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+}
+
+.tramite-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.4rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(29, 67, 99, 0.04);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+
+.tramite-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(29, 67, 99, 0.09);
+  border-color: #93c5fd;
+  color: inherit;
+}
+
+.tramite-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background-color: #eff6ff;
+  border: 1px solid #dbeafe;
+  color: var(--jp-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.tramite-card:hover .tramite-icon-box {
+  background-color: var(--jp-navy);
+  color: #ffffff;
+}
+
+.tramite-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--jp-text-primary);
+  margin-top: 0.85rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.25;
+}
+
+.tramite-card:hover .tramite-title {
+  color: var(--jp-navy);
+}
+
+.tramite-desc {
+  font-size: 0.84rem;
+  color: var(--jp-text-secondary);
+  line-height: 1.5;
+  flex-grow: 1;
+  margin-bottom: 1.2rem;
+}
+
+.tramite-footer {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.arancel-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.arancel-val {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--jp-navy);
+  background-color: #f8fafc;
+  padding: 0.15rem 0.45rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  display: inline-block;
+}
+
+.tramite-link-action {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--jp-blue-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: transform 0.15s ease;
+}
+
+.tramite-card:hover .tramite-link-action {
+  color: var(--jp-navy);
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   PÁGINAS DE TRÁMITES (DETALLES ESPECÍFICOS)
+   ========================================================================== */
+.page-header-card {
+  background-color: #ffffff;
+  border: 1px solid var(--jp-border);
+  border-radius: 14px;
+  padding: 1.6rem 1.8rem;
+  box-shadow: 0 1px 4px rgba(29, 67, 99, 0.04);
+}
+
+.badge-oficial-chaco {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.65rem;
+  border-radius: 50px;
+}
+
+.meta-law {
+  font-size: 0.78rem;
+  color: var(--jp-text-muted);
+  font-weight: 500;
+}
+
+.detail-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--jp-navy);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.detail-subtitle {
+  font-size: 0.95rem;
+  color: var(--jp-text-secondary);
+  line-height: 1.55;
+}
+
+/* Card Arancel Vigente en detalle */
+.arancel-card-highlight {
+  background: linear-gradient(135deg, #f8fafc 0%, #edf4fc 100%);
+  border: 1px solid #cbdff2;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+}
+
+.arancel-card-highlight .arancel-header {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 0.2rem;
+}
+
+.arancel-number-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.arancel-number-row .ut-amount {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--jp-navy);
+}
+
+.arancel-number-row .pesos-amount {
+  font-size: 1.85rem;
+  font-weight: 900;
+  color: var(--jp-navy);
+}
+
+/* Card de Requisitos & Checklist */
+.content-section-card {
+  background-color: #ffffff;
+  border: 1px solid var(--jp-border);
+  border-radius: 14px;
+  padding: 1.6rem 1.8rem;
+  box-shadow: 0 1px 4px rgba(29, 67, 99, 0.04);
+}
+
+.requisitos-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.requisitos-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--jp-navy);
+}
+
+.checklist-counter-badge {
+  font-size: 0.76rem;
+  font-weight: 700;
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+}
+
+.checklist-counter-badge.completed {
+  background-color: #dcfce7;
+  color: #15803d;
+  border-color: #bbf7d0;
+}
+
+.check-item {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.check-item:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.check-item.checked {
+  background-color: #f0fdf4;
+  border-color: #86efac;
+}
+
+.check-box-indicator {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  border: 2px solid #cbd5e1;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  transition: all 0.15s ease;
+}
+
+.check-item.checked .check-box-indicator {
+  background-color: #16a34a;
+  border-color: #16a34a;
+  color: #ffffff;
+}
+
+.check-item-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--jp-text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.check-item.checked .check-item-title {
+  color: #166534;
+}
+
+.check-item-desc {
+  font-size: 0.83rem;
+  color: var(--jp-text-secondary);
+  line-height: 1.45;
+  margin-bottom: 0;
+}
+
+/* Alert Boxes & Avisos */
+.alerta-aviso-azul {
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 12px;
+  padding: 1.15rem 1.3rem;
+  color: #1e3a5f;
+  margin: 1.3rem 0;
+}
+
+.alerta-aviso-amarillo {
+  background-color: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 12px;
+  padding: 1.15rem 1.3rem;
+  color: #92400e;
+  margin: 1.3rem 0;
+}
+
+.personal-guidance-box {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  background-color: #f1f5f9;
+  color: var(--jp-text-secondary);
+  font-size: 0.86rem;
+  font-style: italic;
+}
+
+/* Pasos del trámite en sede (4 pasos) */
+.pasos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 991.98px) {
+  .pasos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .pasos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.paso-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.paso-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--jp-navy);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.paso-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--jp-text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.paso-desc {
+  font-size: 0.78rem;
+  color: var(--jp-text-muted);
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.paso-meta {
+  margin-top: auto;
+  padding-top: 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--jp-blue-secondary);
+}
+
+/* Sidebar: Sede Judicial & FAQ */
+.sidebar-card {
+  background-color: #ffffff;
+  border: 1px solid var(--jp-border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(29, 67, 99, 0.04);
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--jp-navy);
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 0.7rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.map-card-preview {
+  position: relative;
+  height: 140px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKr8oh1sNYGjSGLp0lPK3jAYjjutVU4l1_6BiQ47B1SX-CufFWovoDO7-7jgXRKXbSH9zJCSLFZSSrN4h3xBXlIkbj0EWEUmTaB8SG0XZOvtIrVmM66NE-ZXTvPLobq7_U3k_MAaryifMTUuMXPSHh94xdcLdutoHjXE2TTP_GOwOxuts-ZeYGXQguLlwDkXAdg8gBBlDx80f7_r4DqgrwrJ-39y_t6GV4lEO3g5Z5pExf8EVzDMDw');
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--jp-border);
+  margin-top: 1rem;
+  display: block;
+}
+
+.map-card-tag {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(4px);
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--jp-navy);
+  font-weight: 600;
+}
+
+/* Acordeón de FAQs */
+.accordion-faq .accordion-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px !important;
+  margin-bottom: 0.6rem;
+  overflow: hidden;
+}
+
+.accordion-faq .accordion-button {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--jp-text-primary);
+  background-color: #f8fafc;
+  padding: 0.85rem 1.1rem;
+  box-shadow: none !important;
+}
+
+.accordion-faq .accordion-button:not(.collapsed) {
+  background-color: #eff6ff;
+  color: var(--jp-navy);
+}
+
+.accordion-faq .accordion-body {
+  font-size: 0.82rem;
+  color: var(--jp-text-secondary);
+  line-height: 1.55;
+  background-color: #ffffff;
+  padding: 0.9rem 1.1rem;
+}
+
+/* Footer Institucional */
+.footer-institucional {
+  background-color: var(--jp-navy-footer);
+  color: #cbd5e1;
+  padding: 2.5rem 0 2rem 0;
+  font-size: 0.82rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-brand-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.15rem;
+}
+
+.footer-text-secondary {
+  color: #94a3b8;
+  font-size: 0.78rem;
+}
+
+.footer-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 1.5rem 0 1rem 0;
+}
+
+.footer-copy {
+  font-size: 0.76rem;
+  color: #94a3b8;
+}
+
+.footer-credit {
+  font-size: 0.76rem;
+  color: #e2e8f0;
+}

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Autorización Simple - Juzgado de Paz Letrado</title>
+  <meta name="description" content="Requisitos, modelo de formulario y arancel para tramitar la Autorización Simple en el Juzgado de Paz Letrado de Presidencia Roque Sáenz Peña." />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Estilos compartidos -->
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- Lógica de precios UT dinámica -->
+  <script src="/precios.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER INSTITUCIONAL -->
+  <header class="navbar-institucional sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark py-2">
+      <div class="container-xl">
+        <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none" href="/index.html">
+          <div class="brand-icon-box" aria-hidden="true">
+            <i class="bi bi-bank2 fs-5"></i>
+          </div>
+          <div class="d-flex flex-column">
+            <span class="brand-title">Juzgado de Paz Letrado</span>
+            <span class="brand-subtitle">Presidencia Roque Sáenz Peña · Chaco</span>
+          </div>
+        </a>
+
+        <!-- Botón menú responsive -->
+        <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir navegación">
+          <i class="bi bi-list fs-2 text-white"></i>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarMain">
+          <ul class="navbar-nav align-items-lg-center gap-lg-1 mt-3 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="/index.html">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-link-custom active dropdown-toggle" href="#" id="dropdownTramites" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Trámites
+              </a>
+              <ul class="dropdown-menu dropdown-menu-custom dropdown-menu-end shadow-sm" aria-labelledby="dropdownTramites">
+                <li><a class="dropdown-item fw-medium" href="/certificacion-copias.html"><i class="bi bi-files me-2 text-primary"></i> Certificación de Copias</a></li>
+                <li><a class="dropdown-item fw-medium" href="/certificacion-firmas.html"><i class="bi bi-pen me-2 text-primary"></i> Certificación de Firmas</a></li>
+                <li><a class="dropdown-item fw-medium" href="/informacion-sumaria.html"><i class="bi bi-card-checklist me-2 text-primary"></i> Información Sumaria</a></li>
+                <li><a class="dropdown-item fw-semibold active" href="/autorizacion-simple.html"><i class="bi bi-person-check me-2 text-primary"></i> Autorización Simple</a></li>
+                <li><hr class="dropdown-divider my-1"></li>
+                <li><a class="dropdown-item text-muted" href="/index.html#catalogo-tramites"><i class="bi bi-bus-front me-2"></i> Autorización de Viaje (Interior)</a></li>
+                <li><a class="dropdown-item text-muted" href="/index.html#catalogo-tramites"><i class="bi bi-globe-americas me-2"></i> Autorización de Viaje (Exterior)</a></li>
+                <li><a class="dropdown-item text-muted" href="/index.html#catalogo-tramites"><i class="bi bi-file-earmark-text me-2"></i> Declaración Jurada</a></li>
+                <li><a class="dropdown-item text-muted" href="/index.html#catalogo-tramites"><i class="bi bi-briefcase me-2"></i> Poderes Generales/Especiales</a></li>
+                <li><a class="dropdown-item text-muted" href="/index.html#catalogo-tramites"><i class="bi bi-heart me-2"></i> Carta de Pobreza</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SUB-BARRA DE NAVEGACIÓN Y CONTEXTO -->
+    <div class="nav-subbar">
+      <div class="container-xl d-flex align-items-center justify-content-between">
+        <a href="/index.html">
+          <i class="bi bi-arrow-left"></i>
+          <span>Volver a Trámites / Inicio</span>
+        </a>
+        <span class="badge-presencial">TRÁMITE PRESENCIAL</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="py-4 py-lg-5">
+    <div class="container-xl">
+      <div class="row g-4 items-start">
+
+        <!-- COLUMNA PRINCIPAL (8 COLS DESKTOP) -->
+        <div class="col-12 col-lg-8">
+          <div class="d-flex flex-column gap-4">
+
+            <!-- CABECERA DEL TRÁMITE -->
+            <div class="page-header-card">
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                <div class="d-flex align-items-center gap-2">
+                  <span class="badge-oficial-chaco">
+                    <i class="bi bi-shield-check me-1"></i> TRÁMITE CIUDADANO OFICIAL
+                  </span>
+                  <span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 small fw-semibold">
+                    Resolución Inmediata
+                  </span>
+                </div>
+                <span class="meta-law">Ley Nº 840-A · Poder Judicial del Chaco</span>
+              </div>
+
+              <div class="d-flex align-items-start gap-3">
+                <div class="tramite-icon-box flex-shrink-0 mt-1">
+                  <i class="bi bi-person-check fs-4"></i>
+                </div>
+                <div>
+                  <h1 class="detail-title mb-1">Autorización Simple</h1>
+                  <p class="detail-subtitle mb-0">
+                    Delegación formal de facultades para actuaciones y diligencias administrativas ordinarias ante organismos públicos o privados.
+                  </p>
+                </div>
+              </div>
+
+              <!-- CARD ARANCEL JUDICIAL VIGENTE -->
+              <div class="arancel-card-highlight mt-4">
+                <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
+                  <div>
+                    <div class="arancel-header">ARANCEL JUDICIAL VIGENTE</div>
+                    <div class="arancel-number-row">
+                      <span class="ut-amount"><span class="valor-ut" data-ut="200"></span> UT</span>
+                      <span class="text-muted fw-bold">=</span>
+                      <span class="pesos-amount">$<span class="valor-pesos" data-ut="200"></span></span>
+                      <span class="text-secondary small fw-semibold">pesos</span>
+                    </div>
+                  </div>
+                  <div class="text-sm-end border-top border-sm-0 pt-2 pt-sm-0">
+                    <span class="badge bg-secondary-subtle text-primary border border-secondary-subtle px-2 py-1 small fw-bold">
+                      Tasa de Justicia Chaco
+                    </span>
+                    <div class="small text-muted mt-1">Abono directo en Mesa de Entradas</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CUADRO ACLARACIÓN LEGAL IMPORTANTE -->
+            <div class="alerta-aviso-azul">
+              <div class="d-flex align-items-start gap-3">
+                <i class="bi bi-exclamation-octagon-fill fs-5 text-primary flex-shrink-0 mt-1"></i>
+                <div>
+                  <h3 class="h6 fw-bold mb-1" style="color: var(--jp-navy); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.04em;">
+                    Aclaración Legal
+                  </h3>
+                  <p class="mb-0 small" style="line-height: 1.55;">
+                    Este trámite permite autorizar a un tercero a realizar trámites administrativos simples. <strong>No reemplaza a un poder otorgado ante escribano</strong>, necesario para actos de mayor envergadura o que involucren el manejo de dinero ajeno.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD DOCUMENTACIÓN Y REQUISITOS (CHECKLIST) -->
+            <div class="content-section-card">
+              <div class="requisitos-header">
+                <div>
+                  <h2 class="requisitos-title mb-0 text-uppercase" style="letter-spacing: 0.04em;">Documentación y Requisitos</h2>
+                </div>
+                <span class="checklist-counter-badge" id="autorizacionChecklistBadge">0 de 3 completados</span>
+              </div>
+
+              <p class="text-secondary small mb-3">
+                Para tramitar la autorización en sede judicial se requiere cumplimentar lo siguiente:
+              </p>
+
+              <!-- Items interactivos de checklist -->
+              <div class="checklist-container">
+                <!-- Requisito 1 -->
+                <div class="check-item" onclick="toggleAutorizacionCheck(this)" role="checkbox" aria-checked="false" tabindex="0">
+                  <div class="check-box-indicator">
+                    <i class="bi bi-check-lg fw-bold"></i>
+                  </div>
+                  <div class="flex-grow-1">
+                    <div class="check-item-title">Titular Autorizante</div>
+                    <p class="check-item-desc">
+                      El autorizante debe presentarse con su documento de identidad físico, o el documento digital desde la aplicación miArgentina.
+                    </p>
+                  </div>
+                  <i class="bi bi-person-vcard text-muted fs-5 ms-2 flex-shrink-0"></i>
+                </div>
+
+                <!-- Requisito 2 -->
+                <div class="check-item" onclick="toggleAutorizacionCheck(this)" role="checkbox" aria-checked="false" tabindex="0">
+                  <div class="check-box-indicator">
+                    <i class="bi bi-check-lg fw-bold"></i>
+                  </div>
+                  <div class="flex-grow-1">
+                    <div class="check-item-title">Datos del Tercero</div>
+                    <p class="check-item-desc">
+                      Datos personales del tercero autorizado - no es necesario que presente su documento, ni que se presente en persona.
+                    </p>
+                  </div>
+                  <i class="bi bi-person-lines-fill text-muted fs-5 ms-2 flex-shrink-0"></i>
+                </div>
+
+                <!-- Requisito 3 -->
+                <div class="check-item" onclick="toggleAutorizacionCheck(this)" role="checkbox" aria-checked="false" tabindex="0">
+                  <div class="check-box-indicator">
+                    <i class="bi bi-check-lg fw-bold"></i>
+                  </div>
+                  <div class="flex-grow-1">
+                    <div class="check-item-title">Alcance y Validez de la Actuación</div>
+                    <p class="check-item-desc">
+                      Recordá que la autorización simple está circunscripta a gestiones ordinarias - por ejemplo: retiro de encomiendas o paquetes, trámites ante empresas prestadoras de servicios públicos, retiro de analíticos escolares o solicitudes en dependencias municipales que no impliquen cobro de haberes ni actos de disposición patrimonial.
+                    </p>
+                  </div>
+                  <i class="bi bi-box-seam text-muted fs-5 ms-2 flex-shrink-0"></i>
+                </div>
+              </div>
+
+              <!-- Barra de progreso visual -->
+              <div class="progress mt-3" style="height: 6px;">
+                <div class="progress-bar bg-primary transition-all" id="autorizacionProgressBar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <!-- SECCIÓN FORMULARIO DEL TRÁMITE / DESCARGA -->
+            <div class="content-section-card" style="border-left: 4px solid var(--jp-navy);">
+              <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+                <div>
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <i class="bi bi-file-earmark-arrow-down text-primary fs-4"></i>
+                    <h2 class="requisitos-title mb-0">Formulario del trámite</h2>
+                  </div>
+                  <h3 class="h6 fw-bold text-dark mb-1">Modelo Oficial de Autorización</h3>
+                  <p class="text-secondary small mb-0">
+                    Descargá el formulario oficial para completar previamente los datos requeridos y agilizar tu atención.
+                  </p>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-primary d-inline-flex align-items-center gap-2 fw-semibold px-3 py-2 shadow-sm text-nowrap" data-bs-toggle="modal" data-bs-target="#modalFormulario">
+                    <i class="bi bi-download"></i>
+                    Descargar formulario
+                  </button>
+                </div>
+              </div>
+
+              <div class="mt-3 pt-2 border-top">
+                <p class="text-muted small mb-0">
+                  <i class="bi bi-info-circle text-primary me-1"></i>
+                  Podés descargar, imprimir y completar el formulario en tu casa. <strong>No lo firmes hasta presentarte en el juzgado.</strong>
+                </p>
+              </div>
+            </div>
+
+            <!-- NOTA ORIENTACIÓN DEL PERSONAL -->
+            <div class="personal-guidance-box">
+              <i class="bi bi-person-badge fs-5 text-primary flex-shrink-0"></i>
+              <span>Una vez que te presentes con estos requisitos, el personal del juzgado te guiará durante el resto del trámite.</span>
+            </div>
+
+            <!-- PASOS DEL TRÁMITE EN SEDE -->
+            <div class="content-section-card">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <h2 class="requisitos-title mb-0 text-uppercase" style="letter-spacing: 0.04em;">Pasos del Trámite en Sede</h2>
+                <span class="badge bg-light text-secondary border small">Circuito presencial</span>
+              </div>
+
+              <div class="pasos-grid">
+                <!-- Paso 1 -->
+                <div class="paso-box">
+                  <div class="paso-num">01</div>
+                  <h4 class="paso-title">Mesa de Entradas</h4>
+                  <p class="paso-desc">Presentación del titular autorizante con DNI y formulario.</p>
+                  <span class="paso-meta">Recepción</span>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="paso-box">
+                  <div class="paso-num">02</div>
+                  <h4 class="paso-title">Carga de Datos</h4>
+                  <p class="paso-desc">Verificación de la personería y diligencia sobre el objeto.</p>
+                  <span class="paso-meta">Constatación</span>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="paso-box">
+                  <div class="paso-num">03</div>
+                  <h4 class="paso-title">Firma y Certificación</h4>
+                  <p class="paso-desc">Firma en presencia del actuario y sello del Juez de Paz.</p>
+                  <span class="paso-meta">Fe Pública</span>
+                </div>
+
+                <!-- Paso 4 -->
+                <div class="paso-box" style="background-color: #f0f7ff; border-color: #bae6fd;">
+                  <div class="paso-num" style="background-color: #0369a1;">04</div>
+                  <h4 class="paso-title" style="color: #0369a1;">Entrega Inmediata</h4>
+                  <p class="paso-desc text-dark">Retiro en el acto del instrumento legalizado.</p>
+                  <span class="paso-meta text-success">En el acto</span>
+                </div>
+              </div>
+
+              <div class="mt-3 pt-2 border-top d-flex align-items-center gap-2 small text-secondary">
+                <i class="bi bi-clock text-primary"></i>
+                <span class="fw-semibold">Atención por orden de llegada</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- COLUMNA LATERAL / SIDEBAR (4 COLS DESKTOP) -->
+        <div class="col-12 col-lg-4">
+
+          <!-- CARD SEDE JUDICIAL -->
+          <div class="sidebar-card">
+            <div class="sidebar-title">
+              <i class="bi bi-building"></i>
+              <span>SEDE JUDICIAL</span>
+            </div>
+            
+            <h3 class="h6 fw-bold text-dark mb-1">Juzgado de Paz Letrado</h3>
+            <p class="text-secondary small mb-3">Segunda Circunscripción Judicial del Chaco</p>
+
+            <div class="d-flex flex-column gap-3 small">
+              <div class="d-flex align-items-start gap-2">
+                <i class="bi bi-geo-alt-fill text-danger fs-6 flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <strong class="d-block text-dark">Dirección</strong>
+                  <span class="text-secondary">Calle 10 entre 15 y 17, Belgrano Centro, Presidencia Roque Sáenz Peña</span>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-2">
+                <i class="bi bi-clock-fill text-primary fs-6 flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <strong class="d-block text-dark">Horario de Atención</strong>
+                  <span class="text-dark fw-semibold">Lunes a Viernes</span>
+                  <div class="text-muted small">07:00 a 13:00 hs (Días hábiles judiciales)</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Widget Mapa / Enlace a Google Maps -->
+            <a href="https://maps.google.com/?q=Calle+10+entre+15+y+17+Belgrano+Centro+Presidencia+Roque+Saenz+Pena" target="_blank" rel="noopener noreferrer" class="map-card-preview text-decoration-none">
+              <div class="map-card-tag">
+                <span>Segunda Circunscripción</span>
+                <span class="text-primary">Ver en Google Maps <i class="bi bi-box-arrow-up-right"></i></span>
+              </div>
+            </a>
+
+            <!-- Botón Volver al inicio -->
+            <div class="mt-4 pt-2">
+              <a href="/index.html" class="btn btn-outline-secondary w-full d-flex align-items-center justify-content-center gap-2 py-2 fw-semibold">
+                <i class="bi bi-arrow-left"></i>
+                Volver al inicio / Trámites
+              </a>
+            </div>
+          </div>
+
+          <!-- CARD PREGUNTAS FRECUENTES -->
+          <div class="sidebar-card">
+            <div class="sidebar-title">
+              <i class="bi bi-question-circle"></i>
+              <span>Preguntas Frecuentes</span>
+            </div>
+
+            <div class="accordion accordion-faq" id="autorizacionFaqAccordion">
+              <!-- Pregunta 1 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="autorizacionFaqHeadingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#autorizacionFaqCollapseOne" aria-expanded="false" aria-controls="autorizacionFaqCollapseOne">
+                    ¿Para qué tipo de trámites sirve?
+                  </button>
+                </h3>
+                <div id="autorizacionFaqCollapseOne" class="accordion-collapse collapse" aria-labelledby="autorizacionFaqHeadingOne" data-bs-parent="#autorizacionFaqAccordion">
+                  <div class="accordion-body">
+                    Retiro de encomiendas o paquetes, trámites ordinarios ante empresas prestadoras de servicios públicos (SAMEEP, SECHEEP), retiro de analíticos escolares o certificados en dependencias municipales que no impliquen cobro de haberes ni actos de disposición patrimonial.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 2 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="autorizacionFaqHeadingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#autorizacionFaqCollapseTwo" aria-expanded="false" aria-controls="autorizacionFaqCollapseTwo">
+                    ¿Es necesario que el autorizado asista al juzgado?
+                  </button>
+                </h3>
+                <div id="autorizacionFaqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="autorizacionFaqHeadingTwo" data-bs-parent="#autorizacionFaqAccordion">
+                  <div class="accordion-body">
+                    <strong>No.</strong> Únicamente debe concurrir la persona que otorga la autorización con su DNI físico y los datos identificatorios completos de quien recibe la facultad (nombre completo y número de documento).
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- MODAL PARA DESCARGAR / IMPRIMIR FORMULARIO OFICIAL -->
+  <div class="modal fade" id="modalFormulario" tabindex="-1" aria-labelledby="modalFormularioLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header text-white" style="background-color: var(--jp-navy);">
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-file-earmark-text fs-5"></i>
+            <h3 class="modal-title h6 fw-bold mb-0" id="modalFormularioLabel">Modelo Oficial - Formulario de Autorización Simple</h3>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body p-4 bg-light">
+          <div class="bg-white p-4 rounded-3 border shadow-sm" id="imprimibleFormulario" style="font-family: serif; color: #111;">
+            <div class="text-center mb-4 pb-2 border-bottom">
+              <h4 class="h5 fw-bold text-uppercase mb-1" style="letter-spacing: 0.05em;">Poder Judicial de la Provincia del Chaco</h4>
+              <p class="mb-0 text-muted small">JUZGADO DE PAZ LETRADO - SEGUNDA CIRCUNSCRIPCIÓN JUDICIAL</p>
+              <p class="mb-0 text-muted small">Presidencia Roque Sáenz Peña</p>
+            </div>
+
+            <h5 class="text-center fw-bold text-decoration-underline mb-4">AUTORIZACIÓN SIMPLE</h5>
+
+            <p style="text-align: justify; line-height: 1.8;">
+              En la ciudad de Presidencia Roque Sáenz Peña, Provincia del Chaco, a los ______ días del mes de _________________ de 202____, quien suscribe:
+            </p>
+
+            <p style="line-height: 1.8;">
+              <strong>D./Dña.:</strong> ____________________________________________________________________<br>
+              <strong>DNI Nº:</strong> ____________________________ <strong>Nacionalidad:</strong> ________________________<br>
+              <strong>Domicilio real en:</strong> __________________________________________________________________
+            </p>
+
+            <p style="text-align: justify; line-height: 1.8;">
+              Por la presente <strong>AUTORIZA</strong> formalmente a:
+            </p>
+
+            <p style="line-height: 1.8;">
+              <strong>D./Dña.:</strong> ____________________________________________________________________<br>
+              <strong>DNI Nº:</strong> ____________________________ <strong>Vínculo:</strong> __________________________
+            </p>
+
+            <p style="text-align: justify; line-height: 1.8;">
+              A los efectos exclusivos de realizar ante ______________________________________________________ la siguiente gestión: ________________________________________________________________________<br>
+              ____________________________________________________________________________________________
+            </p>
+
+            <div class="row pt-5 mt-4 text-center">
+              <div class="col-6">
+                <div class="border-top border-dark pt-1 mx-3">
+                  <small>Firma del Autorizante<br>(Firmar solo ante el actuario judicial)</small>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="border-top border-dark pt-1 mx-3">
+                  <small>Firma y Sello del Juez de Paz<br>Juzgado de Paz Letrado</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer bg-white">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary d-inline-flex align-items-center gap-2" onclick="window.print()">
+            <i class="bi bi-printer"></i>
+            Imprimir Formulario
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER INSTITUCIONAL -->
+  <footer class="footer-institucional mt-auto">
+    <div class="container-xl">
+      <div class="row gy-4 align-items-center justify-content-between">
+        <div class="col-12 col-md-7">
+          <div class="d-flex align-items-start gap-3">
+            <div class="brand-icon-box flex-shrink-0">
+              <i class="bi bi-bank2 fs-5"></i>
+            </div>
+            <div>
+              <div class="footer-brand-title">Juzgado de Paz Letrado</div>
+              <div class="text-light small">Presidencia Roque Sáenz Peña</div>
+              <div class="footer-text-secondary">Poder Judicial de la Provincia del Chaco · Segunda Circunscripción Judicial</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-5 text-md-end">
+          <div class="mb-1 text-light small d-flex align-items-center justify-content-md-end gap-1">
+            <i class="bi bi-geo-alt text-info"></i>
+            Calle 10 entre 15 y 17, Belgrano Centro, Presidencia Roque Sáenz Peña
+          </div>
+          <div class="footer-text-secondary d-flex align-items-center justify-content-md-end gap-1">
+            <i class="bi bi-clock text-info"></i>
+            Horario: Lunes a Viernes de 7:00 a 13:00 hs
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="row align-items-center justify-content-between gy-2">
+        <div class="col-12 col-md-auto">
+          <p class="footer-copy mb-0">
+            © 2026 Juzgado de Paz Letrado de Presidencia Roque Sáenz Peña. Todos los derechos reservados.
+          </p>
+        </div>
+        <div class="col-12 col-md-auto">
+          <p class="footer-credit mb-0">
+            Sitio desarrollado por <span class="fw-semibold text-white">Dasigo Leandro Szkamarda</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Script interactivo de Checklist -->
+  <script>
+    function toggleAutorizacionCheck(el) {
+      el.classList.toggle('checked');
+      const isChecked = el.classList.contains('checked');
+      el.setAttribute('aria-checked', isChecked);
+
+      const allItems = document.querySelectorAll('.checklist-container .check-item');
+      const checkedItems = document.querySelectorAll('.checklist-container .check-item.checked');
+      const total = allItems.length;
+      const count = checkedItems.length;
+
+      const badge = document.getElementById('autorizacionChecklistBadge');
+      const progressBar = document.getElementById('autorizacionProgressBar');
+
+      if (badge) {
+        if (count === total) {
+          badge.textContent = '¡Condiciones cumplidas!';
+          badge.classList.add('completed');
+        } else {
+          badge.textContent = `${count} de ${total} completados`;
+          badge.classList.remove('completed');
+        }
+      }
+
+      if (progressBar) {
+        const pct = (count / total) * 100;
+        progressBar.style.width = pct + '%';
+        progressBar.setAttribute('aria-valuenow', pct);
+      }
+    }
+  </script>
+</body>
+</html>

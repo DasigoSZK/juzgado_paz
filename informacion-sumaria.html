@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Información Sumaria - Juzgado de Paz Letrado</title>
+  <meta name="description" content="Guía y requisitos para tramitar información sumaria con testigos, unión convivencial o asignaciones en el Juzgado de Paz de Presidencia Roque Sáenz Peña." />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Estilos compartidos -->
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- Lógica de precios UT dinámica -->
+  <script src="/precios.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER INSTITUCIONAL -->
+  <header class="navbar-institucional sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark py-2">
+      <div class="container-xl">
+        <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none" href="/index.html">
+          <div class="brand-icon-box" aria-hidden="true">
+            <i class="bi bi-bank2 fs-5"></i>
+          </div>
+          <div class="d-flex flex-column">
+            <span class="brand-title">Juzgado de Paz Letrado</span>
+            <span class="brand-subtitle">Presidencia Roque Sáenz Peña · Chaco</span>
+          </div>
+        </a>
+
+        <!-- Botón menú responsive -->
+        <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir navegación">
+          <i class="bi bi-list fs-2 text-white"></i>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarMain">
+          <ul class="navbar-nav align-items-lg-center gap-lg-1 mt-3 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="/index.html">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-link-custom active dropdown-toggle" href="#" id="dropdownTramites" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Trámites
+              </a>
+              <ul class="dropdown-menu dropdown-menu-custom dropdown-menu-end shadow-sm" aria-labelledby="dropdownTramites">
+                <li><a class="dropdown-item fw-medium" href="/certificacion-copias.html"><i class="bi bi-files me-2 text-primary"></i> Certificación de Copias</a></li>
+                <li><a class="dropdown-item fw-medium" href="/certificacion-firmas.html"><i class="bi bi-pen me-2 text-primary"></i> Certificación de Firmas</a></li>
+                <li><a class="dropdown-item fw-semibold active" href="/informacion-sumaria.html"><i class="bi bi-card-checklist me-2 text-primary"></i> Información Sumaria</a></li>
+                <li><a class="dropdown-item fw-medium" href="/autorizacion-simple.html"><i class="bi bi-person-check me-2 text-primary"></i> Autorización Simple</a></li>
+                <li><hr class="dropdown-divider my-1"></li>
+                <li><a class="dropdown-item text-muted" href="/index.html#catalogo-tramites"><i class="bi bi-bus-front me-2"></i> Autorización de Viaje (Interior)</a></li>
+                <li><a class="dropdown-item text-muted" href="/index.html#catalogo-tramites"><i class="bi bi-globe-americas me-2"></i> Autorización de Viaje (Exterior)</a></li>
+                <li><a class="dropdown-item text-muted" href="/index.html#catalogo-tramites"><i class="bi bi-file-earmark-text me-2"></i> Declaración Jurada</a></li>
+                <li><a class="dropdown-item text-muted" href="/index.html#catalogo-tramites"><i class="bi bi-briefcase me-2"></i> Poderes Generales/Especiales</a></li>
+                <li><a class="dropdown-item text-muted" href="/index.html#catalogo-tramites"><i class="bi bi-heart me-2"></i> Carta de Pobreza</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SUB-BARRA DE NAVEGACIÓN Y CONTEXTO -->
+    <div class="nav-subbar">
+      <div class="container-xl d-flex align-items-center justify-content-between">
+        <a href="/index.html">
+          <i class="bi bi-arrow-left"></i>
+          <span>Volver a Trámites / Inicio</span>
+        </a>
+        <span class="badge-presencial">TRÁMITE PRESENCIAL</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="py-4 py-lg-5">
+    <div class="container-xl">
+      <div class="row g-4 items-start">
+
+        <!-- COLUMNA PRINCIPAL (8 COLS DESKTOP) -->
+        <div class="col-12 col-lg-8">
+          <div class="d-flex flex-column gap-4">
+
+            <!-- CABECERA DEL TRÁMITE -->
+            <div class="page-header-card">
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                <span class="badge-oficial-chaco">
+                  <i class="bi bi-shield-check me-1"></i> TRÁMITE CIUDADANO OFICIAL
+                </span>
+                <span class="meta-law">Ley Nº 840-A · Poder Judicial del Chaco</span>
+              </div>
+
+              <div class="d-flex align-items-start gap-3">
+                <div class="tramite-icon-box flex-shrink-0 mt-1">
+                  <i class="bi bi-card-checklist fs-4"></i>
+                </div>
+                <div>
+                  <h1 class="detail-title mb-1">Información Sumaria</h1>
+                  <p class="detail-subtitle mb-0">
+                    Acreditación formal testimonial de hechos fácticos, estado civil, vínculos convivenciales o situaciones familiares ante la autoridad judicial.
+                  </p>
+                </div>
+              </div>
+
+              <!-- CARD ARANCEL JUDICIAL VIGENTE -->
+              <div class="arancel-card-highlight mt-4">
+                <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
+                  <div>
+                    <div class="arancel-header">ARANCEL JUDICIAL VIGENTE</div>
+                    <div class="arancel-number-row">
+                      <span class="ut-amount"><span class="valor-ut" data-ut="750"></span> UT</span>
+                      <span class="text-muted fw-bold">=</span>
+                      <span class="pesos-amount">$<span class="valor-pesos" data-ut="750"></span></span>
+                      <span class="text-secondary small fw-semibold">pesos</span>
+                    </div>
+                  </div>
+                  <div class="text-sm-end border-top border-sm-0 pt-2 pt-sm-0">
+                    <span class="badge bg-secondary-subtle text-primary border border-secondary-subtle px-2 py-1 small fw-bold">
+                      Tasa de Justicia Chaco
+                    </span>
+                    <div class="small text-muted mt-1">Pago por actuación sumarial completa</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD REQUISITOS OBLIGATORIOS BASE -->
+            <div class="content-section-card">
+              <div class="requisitos-header">
+                <div>
+                  <h2 class="requisitos-title mb-0 text-uppercase" style="letter-spacing: 0.04em;">Requisitos Obligatorios Base</h2>
+                  <span class="text-danger small fw-bold">Sin excepción</span>
+                </div>
+                <span class="checklist-counter-badge" id="sumariaChecklistBadge">0 de 2 completados</span>
+              </div>
+
+              <p class="text-secondary small mb-3">
+                Para iniciar una información sumaria en sede judicial, se requiere presentar la siguiente documentación de base:
+              </p>
+
+              <!-- Items interactivos de checklist -->
+              <div class="checklist-container">
+                <!-- Requisito 1 -->
+                <div class="check-item" onclick="toggleSumariaCheck(this)" role="checkbox" aria-checked="false" tabindex="0">
+                  <div class="check-box-indicator">
+                    <i class="bi bi-check-lg fw-bold"></i>
+                  </div>
+                  <div class="flex-grow-1">
+                    <div class="check-item-title">Certificado de domicilio policial</div>
+                    <p class="check-item-desc">
+                      Expedido por la comisaría local con jurisdicción en el domicilio de las partes requirentes.
+                    </p>
+                  </div>
+                  <i class="bi bi-shield-check text-muted fs-5 ms-2 flex-shrink-0"></i>
+                </div>
+
+                <!-- Requisito 2 -->
+                <div class="check-item" onclick="toggleSumariaCheck(this)" role="checkbox" aria-checked="false" tabindex="0">
+                  <div class="check-box-indicator">
+                    <i class="bi bi-check-lg fw-bold"></i>
+                  </div>
+                  <div class="flex-grow-1">
+                    <div class="check-item-title">2 testigos que no sean familiares</div>
+                    <p class="check-item-desc">
+                      Con documento de identidad en mano y domicilio en Presidencia Roque Sáenz Peña. Los testigos deben ser mayores de edad y acreditar residencia efectiva en la Segunda Circunscripción Judicial.
+                    </p>
+                  </div>
+                  <i class="bi bi-people text-muted fs-5 ms-2 flex-shrink-0"></i>
+                </div>
+              </div>
+
+              <!-- Barra de progreso visual -->
+              <div class="progress mt-3" style="height: 6px;">
+                <div class="progress-bar bg-primary transition-all" id="sumariaProgressBar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <!-- CARD REQUISITOS ADICIONALES SEGÚN CASO (4 CAUSALES) -->
+            <div class="content-section-card">
+              <h2 class="requisitos-title mb-1 text-uppercase" style="letter-spacing: 0.04em;">
+                Requisitos Adicionales según el tipo de trámite
+              </h2>
+              <p class="text-secondary small mb-3">
+                Verifique si su caso corresponde a alguno de los siguientes 4 supuestos para adjuntar la documentación específica requerida:
+              </p>
+
+              <div class="row g-3">
+                <!-- Causal 1 -->
+                <div class="col-12 col-md-6">
+                  <div class="p-3 rounded-3 border bg-light h-100">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span class="badge bg-primary-subtle text-primary border border-primary-subtle fw-bold">Causal 01</span>
+                      <strong class="text-dark small">Familiar a cargo</strong>
+                    </div>
+                    <div class="fw-semibold small text-primary mb-1">
+                      <i class="bi bi-file-earmark-person me-1"></i> Acta de nacimiento de cada menor
+                    </div>
+                    <p class="text-muted small mb-0">
+                      Fotocopia y original actualizado o partida digital con validez de verificación.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Causal 2 -->
+                <div class="col-12 col-md-6">
+                  <div class="p-3 rounded-3 border bg-light h-100">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span class="badge bg-primary-subtle text-primary border border-primary-subtle fw-bold">Causal 02</span>
+                      <strong class="text-dark small">Concubinato post mortem</strong>
+                    </div>
+                    <div class="fw-semibold small text-primary mb-1">
+                      <i class="bi bi-file-earmark-break me-1"></i> Acta de defunción
+                    </div>
+                    <p class="text-muted small mb-0">
+                      Del causante emitida por el Registro del Estado Civil y Capacidad de las Personas.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Causal 3 -->
+                <div class="col-12 col-md-6">
+                  <div class="p-3 rounded-3 border bg-light h-100">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span class="badge bg-primary-subtle text-primary border border-primary-subtle fw-bold">Causal 03</span>
+                      <strong class="text-dark small">Concubinato con domicilios distintos</strong>
+                    </div>
+                    <div class="fw-semibold small text-primary mb-1">
+                      <i class="bi bi-file-earmark-ruled me-1"></i> Acta de matrimonio o divorcio
+                    </div>
+                    <p class="text-muted small mb-0">
+                      Constancia de disolución vincular previa o constancia registral si correspondiere.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Causal 4 -->
+                <div class="col-12 col-md-6">
+                  <div class="p-3 rounded-3 border bg-light h-100">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span class="badge bg-primary-subtle text-primary border border-primary-subtle fw-bold">Causal 04</span>
+                      <strong class="text-dark small">Familiar a cargo (tutor no progenitor)</strong>
+                    </div>
+                    <div class="fw-semibold small text-primary mb-1">
+                      <i class="bi bi-file-earmark-check me-1"></i> Documento del juzgado de familia
+                    </div>
+                    <p class="text-muted small mb-0">
+                      Resolución judicial formal de guarda, tutela o delegación de responsabilidad parental.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- NOTA ORIENTACIÓN DEL PERSONAL -->
+            <div class="personal-guidance-box">
+              <i class="bi bi-person-badge fs-5 text-primary flex-shrink-0"></i>
+              <span>Una vez que te presentes con estos requisitos, el personal del juzgado te guiará durante el resto del trámite.</span>
+            </div>
+
+            <!-- PASOS DEL TRÁMITE EN SEDE -->
+            <div class="content-section-card">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <h2 class="requisitos-title mb-0 text-uppercase" style="letter-spacing: 0.04em;">Pasos del Trámite en Sede</h2>
+                <span class="badge bg-light text-secondary border small">Circuito presencial</span>
+              </div>
+
+              <div class="pasos-grid">
+                <!-- Paso 1 -->
+                <div class="paso-box">
+                  <div class="paso-num">01</div>
+                  <h4 class="paso-title">Mesa de Entradas</h4>
+                  <p class="paso-desc">Ingreso del trámite y control documental de las partes y testigos.</p>
+                  <span class="paso-meta">Recepción</span>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="paso-box">
+                  <div class="paso-num">02</div>
+                  <h4 class="paso-title">Declaración Testimonial</h4>
+                  <p class="paso-desc">Toma de declaraciones bajo juramento de ley ante el actuario.</p>
+                  <span class="paso-meta">Audiencia</span>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="paso-box">
+                  <div class="paso-num">03</div>
+                  <h4 class="paso-title">Firma y Validación</h4>
+                  <p class="paso-desc">Suscripción del acta por requirentes, testigos y Juez de Paz.</p>
+                  <span class="paso-meta">Resolución</span>
+                </div>
+
+                <!-- Paso 4 -->
+                <div class="paso-box" style="background-color: #f0f7ff; border-color: #bae6fd;">
+                  <div class="paso-num" style="background-color: #0369a1;">04</div>
+                  <h4 class="paso-title" style="color: #0369a1;">Retiro de Testimonio</h4>
+                  <p class="paso-desc text-dark">Emisión de testimonio legalizado para presentar ante el organismo.</p>
+                  <span class="paso-meta text-success">Concluido</span>
+                </div>
+              </div>
+
+              <div class="mt-3 pt-2 border-top d-flex align-items-center gap-2 small text-secondary">
+                <i class="bi bi-people-fill text-primary"></i>
+                <span class="fw-semibold">Atención por orden de llegada</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- COLUMNA LATERAL / SIDEBAR (4 COLS DESKTOP) -->
+        <div class="col-12 col-lg-4">
+
+          <!-- CARD SEDE JUDICIAL -->
+          <div class="sidebar-card">
+            <div class="sidebar-title">
+              <i class="bi bi-building"></i>
+              <span>SEDE JUDICIAL</span>
+            </div>
+            
+            <h3 class="h6 fw-bold text-dark mb-1">Juzgado de Paz Letrado</h3>
+            <p class="text-secondary small mb-3">Segunda Circunscripción Judicial del Chaco</p>
+
+            <div class="d-flex flex-column gap-3 small">
+              <div class="d-flex align-items-start gap-2">
+                <i class="bi bi-geo-alt-fill text-danger fs-6 flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <strong class="d-block text-dark">Dirección</strong>
+                  <span class="text-secondary">Calle 10 entre 15 y 17, Belgrano Centro, Presidencia Roque Sáenz Peña</span>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-2">
+                <i class="bi bi-clock-fill text-primary fs-6 flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <strong class="d-block text-dark">Horario de Atención</strong>
+                  <span class="text-dark fw-semibold">Lunes a Viernes</span>
+                  <div class="text-muted small">07:00 a 13:00 hs (Días hábiles judiciales)</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Widget Mapa / Enlace a Google Maps -->
+            <a href="https://maps.google.com/?q=Calle+10+entre+15+y+17+Belgrano+Centro+Presidencia+Roque+Saenz+Pena" target="_blank" rel="noopener noreferrer" class="map-card-preview text-decoration-none">
+              <div class="map-card-tag">
+                <span>Segunda Circunscripción</span>
+                <span class="text-primary">Ver en Google Maps <i class="bi bi-box-arrow-up-right"></i></span>
+              </div>
+            </a>
+
+            <!-- Botón Volver al inicio -->
+            <div class="mt-4 pt-2">
+              <a href="/index.html" class="btn btn-outline-secondary w-full d-flex align-items-center justify-content-center gap-2 py-2 fw-semibold">
+                <i class="bi bi-arrow-left"></i>
+                Volver al inicio / Trámites
+              </a>
+            </div>
+          </div>
+
+          <!-- CARD PREGUNTAS FRECUENTES -->
+          <div class="sidebar-card">
+            <div class="sidebar-title">
+              <i class="bi bi-question-circle"></i>
+              <span>Preguntas Frecuentes</span>
+            </div>
+
+            <div class="accordion accordion-faq" id="sumariaFaqAccordion">
+              <!-- Pregunta 1 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="sumariaFaqHeadingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sumariaFaqCollapseOne" aria-expanded="false" aria-controls="sumariaFaqCollapseOne">
+                    ¿Quiénes pueden ser testigos?
+                  </button>
+                </h3>
+                <div id="sumariaFaqCollapseOne" class="accordion-collapse collapse" aria-labelledby="sumariaFaqHeadingOne" data-bs-parent="#sumariaFaqAccordion">
+                  <div class="accordion-body">
+                    Deben ser personas mayores de 18 años, no unidas por lazo de parentesco por consanguinidad ni afinidad con el solicitante, con DNI vigente y domicilio comprobable en Sáenz Peña.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 2 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="sumariaFaqHeadingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sumariaFaqCollapseTwo" aria-expanded="false" aria-controls="sumariaFaqCollapseTwo">
+                    ¿Para qué organismos suele solicitarse?
+                  </button>
+                </h3>
+                <div id="sumariaFaqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="sumariaFaqHeadingTwo" data-bs-parent="#sumariaFaqAccordion">
+                  <div class="accordion-body">
+                    ANSES, INSSSEP, obras sociales, trámites previsionales, asignaciones familiares o subsidios de vivienda y hábitat.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 3 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="sumariaFaqHeadingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sumariaFaqCollapseThree" aria-expanded="false" aria-controls="sumariaFaqCollapseThree">
+                    ¿Tiene vencimiento la constancia?
+                  </button>
+                </h3>
+                <div id="sumariaFaqCollapseThree" class="accordion-collapse collapse" aria-labelledby="sumariaFaqHeadingThree" data-bs-parent="#sumariaFaqAccordion">
+                  <div class="accordion-body">
+                    Generalmente la validez temporal la estipula el organismo requirente (frecuentemente entre 30 y 90 días corridos contados desde su expedición).
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TARJETA ORIENTACIÓN PREVIA -->
+            <div class="mt-3 p-3 rounded-3 border bg-light text-secondary small">
+              <div class="d-flex align-items-start gap-2">
+                <i class="bi bi-lightbulb-fill text-warning flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <strong class="text-dark d-block">¿Dudas sobre su documentación?</strong>
+                  Consulte en la mesa de certificación de firmas y copias del Juzgado de Paz antes de trasladar a los testigos a fin de validar requisitos.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER INSTITUCIONAL -->
+  <footer class="footer-institucional mt-auto">
+    <div class="container-xl">
+      <div class="row gy-4 align-items-center justify-content-between">
+        <div class="col-12 col-md-7">
+          <div class="d-flex align-items-start gap-3">
+            <div class="brand-icon-box flex-shrink-0">
+              <i class="bi bi-bank2 fs-5"></i>
+            </div>
+            <div>
+              <div class="footer-brand-title">Juzgado de Paz Letrado</div>
+              <div class="text-light small">Presidencia Roque Sáenz Peña</div>
+              <div class="footer-text-secondary">Poder Judicial de la Provincia del Chaco · Segunda Circunscripción Judicial</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-5 text-md-end">
+          <div class="mb-1 text-light small d-flex align-items-center justify-content-md-end gap-1">
+            <i class="bi bi-geo-alt text-info"></i>
+            Calle 10 entre 15 y 17, Belgrano Centro, Presidencia Roque Sáenz Peña
+          </div>
+          <div class="footer-text-secondary d-flex align-items-center justify-content-md-end gap-1">
+            <i class="bi bi-clock text-info"></i>
+            Horario: Lunes a Viernes de 7:00 a 13:00 hs
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="row align-items-center justify-content-between gy-2">
+        <div class="col-12 col-md-auto">
+          <p class="footer-copy mb-0">
+            © 2026 Juzgado de Paz Letrado de Presidencia Roque Sáenz Peña. Todos los derechos reservados.
+          </p>
+        </div>
+        <div class="col-12 col-md-auto">
+          <p class="footer-credit mb-0">
+            Sitio desarrollado por <span class="fw-semibold text-white">Dasigo Leandro Szkamarda</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Script interactivo de Checklist -->
+  <script>
+    function toggleSumariaCheck(el) {
+      el.classList.toggle('checked');
+      const isChecked = el.classList.contains('checked');
+      el.setAttribute('aria-checked', isChecked);
+
+      const allItems = document.querySelectorAll('.checklist-container .check-item');
+      const checkedItems = document.querySelectorAll('.checklist-container .check-item.checked');
+      const total = allItems.length;
+      const count = checkedItems.length;
+
+      const badge = document.getElementById('sumariaChecklistBadge');
+      const progressBar = document.getElementById('sumariaProgressBar');
+
+      if (badge) {
+        if (count === total) {
+          badge.textContent = '¡Documentación lista!';
+          badge.classList.add('completed');
+        } else {
+          badge.textContent = `${count} de ${total} completados`;
+          badge.classList.remove('completed');
+        }
+      }
+
+      if (progressBar) {
+        const pct = (count / total) * 100;
+        progressBar.style.width = pct + '%';
+        progressBar.setAttribute('aria-valuenow', pct);
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Juzgado de Paz - Presidencia Roque Sáenz Peña",
+  "description": "Portal informativo oficial de trámites y actuaciones ciudadanas del Juzgado de Paz Letrado de Presidencia Roque Sáenz Peña, Chaco.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
