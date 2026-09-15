@@ -148,9 +148,9 @@ main {
 .hero-judicial {
   position: relative;
   background-color: #0d2133;
-  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAlsJB25ooJbbYUuwcTLJhhJjIGYT_7ncR_QIFH7myE6hEhnpMzo_brYoxjMIDEUhHy-qoiaC_RiPrAVfFVsvS6C8nA4y4cidhqWX9lQHKn9wO6cQGqkRUAo7vzR-gKG_q2Qwd3O7evfZ-NrjWwYd0QvRt1DTERb8-Q5LrYTZauur6dXttJ6Njg1MTYPXZIfJ5b91N2EZaBm6dCvUPT95TaWk7IbPRw-VNNyVLrdhO-DICRdQzAWL8X');
+  background-image: url('./assets/imgs/hero_image_poder_judicial_sp.webp');
   background-size: cover;
-  background-position: center 30%;
+  background-position: 100% 30%;
   color: #ffffff;
   overflow: hidden;
   padding: 3.5rem 0 3.2rem 0;
