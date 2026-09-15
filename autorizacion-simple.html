@@ -233,10 +233,12 @@
                   </p>
                 </div>
                 <div>
-                  <button type="button" class="btn btn-primary d-inline-flex align-items-center gap-2 fw-semibold px-3 py-2 shadow-sm text-nowrap" data-bs-toggle="modal" data-bs-target="#modalFormulario">
-                    <i class="bi bi-download"></i>
-                    Descargar formulario
-                  </button>
+                  <a href="./assets/modelo_pdf_formularios/autorizacion_simple.pdf" target="_blank">
+                    <button type="button" class="btn btn-primary d-inline-flex align-items-center gap-2 fw-semibold px-3 py-2 shadow-sm text-nowrap">
+                      <i class="bi bi-download"></i>
+                      Descargar formulario
+                    </button>
+                  </a>
                 </div>
               </div>
 
@@ -396,76 +398,6 @@
       </div>
     </div>
   </main>
-
-  <!-- MODAL PARA DESCARGAR / IMPRIMIR FORMULARIO OFICIAL -->
-  <div class="modal fade" id="modalFormulario" tabindex="-1" aria-labelledby="modalFormularioLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0 shadow">
-        <div class="modal-header text-white" style="background-color: var(--jp-navy);">
-          <div class="d-flex align-items-center gap-2">
-            <i class="bi bi-file-earmark-text fs-5"></i>
-            <h3 class="modal-title h6 fw-bold mb-0" id="modalFormularioLabel">Modelo Oficial - Formulario de Autorización Simple</h3>
-          </div>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body p-4 bg-light">
-          <div class="bg-white p-4 rounded-3 border shadow-sm" id="imprimibleFormulario" style="font-family: serif; color: #111;">
-            <div class="text-center mb-4 pb-2 border-bottom">
-              <h4 class="h5 fw-bold text-uppercase mb-1" style="letter-spacing: 0.05em;">Poder Judicial de la Provincia del Chaco</h4>
-              <p class="mb-0 text-muted small">JUZGADO DE PAZ LETRADO - SEGUNDA CIRCUNSCRIPCIÓN JUDICIAL</p>
-              <p class="mb-0 text-muted small">Presidencia Roque Sáenz Peña</p>
-            </div>
-
-            <h5 class="text-center fw-bold text-decoration-underline mb-4">AUTORIZACIÓN SIMPLE</h5>
-
-            <p style="text-align: justify; line-height: 1.8;">
-              En la ciudad de Presidencia Roque Sáenz Peña, Provincia del Chaco, a los ______ días del mes de _________________ de 202____, quien suscribe:
-            </p>
-
-            <p style="line-height: 1.8;">
-              <strong>D./Dña.:</strong> ____________________________________________________________________<br>
-              <strong>DNI Nº:</strong> ____________________________ <strong>Nacionalidad:</strong> ________________________<br>
-              <strong>Domicilio real en:</strong> __________________________________________________________________
-            </p>
-
-            <p style="text-align: justify; line-height: 1.8;">
-              Por la presente <strong>AUTORIZA</strong> formalmente a:
-            </p>
-
-            <p style="line-height: 1.8;">
-              <strong>D./Dña.:</strong> ____________________________________________________________________<br>
-              <strong>DNI Nº:</strong> ____________________________ <strong>Vínculo:</strong> __________________________
-            </p>
-
-            <p style="text-align: justify; line-height: 1.8;">
-              A los efectos exclusivos de realizar ante ______________________________________________________ la siguiente gestión: ________________________________________________________________________<br>
-              ____________________________________________________________________________________________
-            </p>
-
-            <div class="row pt-5 mt-4 text-center">
-              <div class="col-6">
-                <div class="border-top border-dark pt-1 mx-3">
-                  <small>Firma del Autorizante<br>(Firmar solo ante el actuario judicial)</small>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="border-top border-dark pt-1 mx-3">
-                  <small>Firma y Sello del Juez de Paz<br>Juzgado de Paz Letrado</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer bg-white">
-          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary d-inline-flex align-items-center gap-2" onclick="window.print()">
-            <i class="bi bi-printer"></i>
-            Imprimir Formulario
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- FOOTER INSTITUCIONAL -->
   <footer class="footer-institucional mt-auto">
