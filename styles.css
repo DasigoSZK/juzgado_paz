@@ -154,6 +154,7 @@ main {
   color: #ffffff;
   overflow: hidden;
   padding: 3.5rem 0 3.2rem 0;
+  height: 50vh;
 }
 
 .hero-overlay {
