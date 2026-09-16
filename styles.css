@@ -148,19 +148,19 @@ main {
 .hero-judicial {
   position: relative;
   background-color: #0d2133;
-  background-image: url('./assets/imgs/hero_image_poder_judicial_sp.webp');
+  background-image: url('./assets/imgs/hero_image_poder_judicial_sp.jpg');
   background-size: cover;
-  background-position: 100% 30%;
+  background-position: bottom;
   color: #ffffff;
   overflow: hidden;
   padding: 3.5rem 0 3.2rem 0;
-  height: 50vh;
+  height: 60vh;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(14, 34, 52, 0.88) 0%, rgba(29, 67, 99, 0.92) 60%, rgba(29, 67, 99, 0.98) 100%);
+  background: linear-gradient(180deg, rgba(14, 34, 52, 0.7) 0%, rgba(29, 67, 99, 0.7) 60%, rgba(29, 67, 99, 0.7) 100%);
   z-index: 1;
 }
 
