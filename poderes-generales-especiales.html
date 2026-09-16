@@ -174,65 +174,26 @@
                     <i class="bi bi-check-lg fw-bold"></i>
                   </div>
                   <div class="flex-grow-1">
-                    <div class="check-item-title">DNI Original y Copia del Poderdante</div>
+                    <div class="check-item-title">DNI Físico / Digital del Poderdante</div>
                     <p class="check-item-desc">
-                      Documento Nacional de Identidad vigente y fotocopia de la persona física que otorga la representación.
+                      Documento Nacional de Identidad físico o digital desde la aplicación "Mi Argentina".
                     </p>
                   </div>
                 </div>
 
                 <!-- Requisito 2 -->
-                <div class="check-item" onclick="togglePoderesCheck(this)" role="checkbox" aria-checked="false" tabindex="0">
+                <div class="check-item" onclick="toggleFirmasCheck(this)" role="checkbox" aria-checked="false" tabindex="0">
                   <div class="check-box-indicator">
                     <i class="bi bi-check-lg fw-bold"></i>
                   </div>
                   <div class="flex-grow-1">
-                    <div class="check-item-title">Comparecencia Personal Obligatoria</div>
+                    <div class="check-item-title">Tener domicilio en Presidencia Roque Sáenz Peña</div>
                     <p class="check-item-desc">
-                      Presencia física ineludible del otorgante en el Juzgado de Paz para manifestar su conformidad y suscribir el acta.
+                      Debe figurar en su documento nacional de identidad o acreditarse mediante certificado policial de radicación efectiva en la Segunda Circunscripción Judicial.
                     </p>
                   </div>
+                  <i class="bi bi-geo-alt text-muted fs-5 ms-2 flex-shrink-0"></i>
                 </div>
-
-                <!-- Requisito 3 -->
-                <div class="check-item" onclick="togglePoderesCheck(this)" role="checkbox" aria-checked="false" tabindex="0">
-                  <div class="check-box-indicator">
-                    <i class="bi bi-check-lg fw-bold"></i>
-                  </div>
-                  <div class="flex-grow-1">
-                    <div class="check-item-title">Datos Completos del Apoderado / Letrado</div>
-                    <p class="check-item-desc">
-                      Nombre completo, DNI, Matrícula del Colegio de Abogados del Chaco y domicilio legal constituido del profesional designado.
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Requisito 4 -->
-                <div class="check-item" onclick="togglePoderesCheck(this)" role="checkbox" aria-checked="false" tabindex="0">
-                  <div class="check-box-indicator">
-                    <i class="bi bi-check-lg fw-bold"></i>
-                  </div>
-                  <div class="flex-grow-1">
-                    <div class="check-item-title">Datos del Juicio o Diligencia a Encomendar</div>
-                    <p class="check-item-desc">
-                      Para poder especial: carátula, número de expediente y juzgado interviniente (o repartición administrativa específica).
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Requisito 5 -->
-                <div class="check-item" onclick="togglePoderesCheck(this)" role="checkbox" aria-checked="false" tabindex="0">
-                  <div class="check-box-indicator">
-                    <i class="bi bi-check-lg fw-bold"></i>
-                  </div>
-                  <div class="flex-grow-1">
-                    <div class="check-item-title">Arancel de Justicia (200 UT)</div>
-                    <p class="check-item-desc">
-                      Pago de la tasa de 200 UT ($<span class="valor-pesos" data-ut="200"></span> pesos). Exceptuado en causas laborales (art. 20 LCT).
-                    </p>
-                  </div>
-                </div>
-              </div>
 
               <!-- Barra de progreso -->
               <div class="mt-3 pt-2">
@@ -242,8 +203,14 @@
               </div>
             </div>
 
-                        <!-- SECCIÓN FORMULARIO DEL TRÁMITE / DESCARGA -->
-            <div class="content-section-card" style="border-left: 4px solid var(--jp-navy);">
+            <!-- NOTA ORIENTACIÓN DEL PERSONAL -->
+            <div class="personal-guidance-box">
+              <i class="bi bi-person-badge fs-5 text-primary flex-shrink-0"></i>
+              <span>Una vez que te presentes con estos requisitos, el personal del juzgado te guiará durante el resto del trámite.</span>
+            </div>
+
+            <!-- SECCIÓN FORMULARIO DEL TRÁMITE / DESCARGA -->
+            <div class="content-section-card mt-5" style="border-left: 4px solid var(--jp-navy);">
               <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
                 <div>
                   <div class="d-flex align-items-center gap-2 mb-1">
@@ -273,14 +240,10 @@
               </div>
             </div>
 
-            <!-- NOTA ORIENTACIÓN DEL PERSONAL -->
-            <div class="personal-guidance-box">
-              <i class="bi bi-person-badge fs-5 text-primary flex-shrink-0"></i>
-              <span>Una vez que te presentes con estos requisitos, el personal del juzgado te guiará durante el resto del trámite.</span>
-            </div>
+            
 
             <!-- PASOS DEL TRÁMITE EN SEDE -->
-            <div class="content-section-card">
+            <div class="content-section-card mt-5">
               <div class="d-flex align-items-center justify-content-between mb-2">
                 <h2 class="requisitos-title mb-0 text-uppercase" style="letter-spacing: 0.04em;">Pasos del Trámite en Sede</h2>
                 <span class="badge bg-light text-secondary border small">Circuito presencial</span>
@@ -290,24 +253,24 @@
                 <!-- Paso 1 -->
                 <div class="paso-box">
                   <div class="paso-num">01</div>
-                  <h4 class="paso-title">Mesa de Entradas</h4>
-                  <p class="paso-desc">Acreditación de identidad y datos del letrado o apoderado designado.</p>
+                  <h4 class="paso-title">Presentar el Poder</h4>
+                  <p class="paso-desc">Traer el Poder General / Especial confeccionado por su abogado.</p>
                   <span class="paso-meta">Comparecencia</span>
                 </div>
 
                 <!-- Paso 2 -->
                 <div class="paso-box">
                   <div class="paso-num">02</div>
-                  <h4 class="paso-title">Redacción del Acta</h4>
-                  <p class="paso-desc">Estipulación de facultades procesales (demandar, contestar, apelar, etc.).</p>
+                  <h4 class="paso-title">Mesa de Entradas</h4>
+                  <p class="paso-desc">Concurrí a Mesa de Entradas con DNI vigente y domicilio comprobable en Sáenz Peña.</p>
                   <span class="paso-meta">Instrumentación</span>
                 </div>
 
                 <!-- Paso 3 -->
                 <div class="paso-box">
                   <div class="paso-num">03</div>
-                  <h4 class="paso-title">Suscripción Formal</h4>
-                  <p class="paso-desc">Firma en presencia del Actuario y Juez de Paz Letrado.</p>
+                  <h4 class="paso-title">Firma y Sellos</h4>
+                  <p class="paso-desc">Firma del poderdante, Secretario y Juez de Paz.</p>
                   <span class="paso-meta">Fe Pública</span>
                 </div>
 
@@ -315,7 +278,7 @@
                 <div class="paso-box" style="background-color: #f0f7ff; border-color: #bae6fd;">
                   <div class="paso-num" style="background-color: #0369a1;">04</div>
                   <h4 class="paso-title" style="color: #0369a1;">Poder Concluido</h4>
-                  <p class="paso-desc text-dark">Entrega del testimonio para incorporar de inmediato al expediente judicial.</p>
+                  <p class="paso-desc text-dark">Entre del Poder firmado y certificado.</p>
                   <span class="paso-meta text-success">En el acto</span>
                 </div>
               </div>
@@ -329,7 +292,11 @@
           </div>
         </div>
 
-        <!-- COLUMNA LATERAL / SIDEBAR (4 COLS DESKTOP) -->
+
+
+      </div>
+
+              <!-- COLUMNA LATERAL / SIDEBAR (4 COLS DESKTOP) -->
         <div class="col-12 col-lg-4">
 
           <!-- CARD SEDE JUDICIAL -->
@@ -441,8 +408,6 @@
           </div>
 
         </div>
-
-      </div>
     </div>
   </main>
 

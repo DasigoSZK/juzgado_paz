@@ -111,7 +111,7 @@
                 <div>
                   <h1 class="detail-title mb-1">Carta de Pobreza</h1>
                   <p class="detail-subtitle mb-0">
-                    Constancia judicial que certifica la escasez de recursos económicos para gozar de exención en tributos y tasas (beneficio de litigar sin gastos).
+                    La carta de pobreza permite que el Estado te provea de un abogado gratuito para juicios sucesorios, administrativos, ejecutivos o similares. Cartas de pobreza para juicios de familia no tramitan en el Juzgado de Paz.
                   </p>
                 </div>
               </div>
@@ -172,9 +172,9 @@
                     <i class="bi bi-check-lg fw-bold"></i>
                   </div>
                   <div class="flex-grow-1">
-                    <div class="check-item-title">DNI del Solicitante (Original y Copia)</div>
+                    <div class="check-item-title">Datos del Solicitante</div>
                     <p class="check-item-desc">
-                      Documento Nacional de Identidad vigente con domicilio registrado en Presidencia Roque Sáenz Peña o jurisdicción.
+                      Apellido y Nombre, edad, domiciio, estado civil, ocupación, DNI y teléfono.
                     </p>
                   </div>
                 </div>
@@ -185,9 +185,9 @@
                     <i class="bi bi-check-lg fw-bold"></i>
                   </div>
                   <div class="flex-grow-1">
-                    <div class="check-item-title">Dos (2) Testigos Mayores de Edad con DNI</div>
+                    <div class="check-item-title">Datos de 2 testigos NO familiares</div>
                     <p class="check-item-desc">
-                      Comparecencia personal de dos personas con DNI físico que conozcan al solicitante (no pueden ser cónyuges, convivientes ni parientes directos).
+                      Apellido y Nombre, edad, domiciio, estado civil, ocupación, DNI y teléfono.
                     </p>
                   </div>
                 </div>
@@ -198,26 +198,12 @@
                     <i class="bi bi-check-lg fw-bold"></i>
                   </div>
                   <div class="flex-grow-1">
-                    <div class="check-item-title">Acreditación de Situación Económica</div>
+                    <div class="check-item-title">Informe de Ingresos de ANSES</div>
                     <p class="check-item-desc">
-                      Certificación Negativa emitida por ANSES (comprobante de no aportes o empleo no registrado) o último recibo de haberes mínimos si trabaja.
+                      Se recomienta solicitar un "informe de ingresos" en ANSES de manera particular para agilizar el trámite.
                     </p>
                   </div>
                 </div>
-
-                <!-- Requisito 4 -->
-                <div class="check-item" onclick="togglePobrezaCheck(this)" role="checkbox" aria-checked="false" tabindex="0">
-                  <div class="check-box-indicator">
-                    <i class="bi bi-check-lg fw-bold"></i>
-                  </div>
-                  <div class="flex-grow-1">
-                    <div class="check-item-title">Especificación del Destino o Trámite</div>
-                    <p class="check-item-desc">
-                      Informar la finalidad para la cual se solicita el beneficio (ej. juicio de alimentos ante el Juzgado de Familia, trámite municipal o beneficio procesal).
-                    </p>
-                  </div>
-                </div>
-              </div>
 
               <!-- Barra de progreso -->
               <div class="mt-3 pt-2">
@@ -227,8 +213,14 @@
               </div>
             </div>
 
+            <!-- NOTA ORIENTACIÓN DEL PERSONAL -->
+            <div class="personal-guidance-box">
+              <i class="bi bi-person-badge fs-5 text-primary flex-shrink-0"></i>
+              <span>Una vez que te presentes con estos requisitos, el personal del juzgado te guiará durante el resto del trámite.</span>
+            </div>
+
             <!-- SECCIÓN FORMULARIO DEL TRÁMITE / DESCARGA -->
-            <div class="content-section-card" style="border-left: 4px solid var(--jp-navy);">
+            <div class="content-section-card mt-5" style="border-left: 4px solid var(--jp-navy);">
               <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
                 <div>
                   <div class="d-flex align-items-center gap-2 mb-1">
@@ -258,14 +250,10 @@
               </div>
             </div>
 
-            <!-- NOTA ORIENTACIÓN DEL PERSONAL -->
-            <div class="personal-guidance-box">
-              <i class="bi bi-person-badge fs-5 text-primary flex-shrink-0"></i>
-              <span>Una vez que te presentes con estos requisitos, el personal del juzgado te guiará durante el resto del trámite.</span>
-            </div>
+
 
             <!-- PASOS DEL TRÁMITE EN SEDE -->
-            <div class="content-section-card">
+            <div class="content-section-card mt-5">
               <div class="d-flex align-items-center justify-content-between mb-2">
                 <h2 class="requisitos-title mb-0 text-uppercase" style="letter-spacing: 0.04em;">Pasos del Trámite en Sede</h2>
                 <span class="badge bg-light text-secondary border small">Circuito presencial</span>
@@ -303,7 +291,10 @@
           </div>
         </div>
 
-        <!-- COLUMNA LATERAL / SIDEBAR (4 COLS DESKTOP) -->
+
+
+      </div>
+              <!-- COLUMNA LATERAL / SIDEBAR (4 COLS DESKTOP) -->
         <div class="col-12 col-lg-4">
 
           <!-- CARD SEDE JUDICIAL -->
@@ -415,8 +406,6 @@
           </div>
 
         </div>
-
-      </div>
     </div>
   </main>
 

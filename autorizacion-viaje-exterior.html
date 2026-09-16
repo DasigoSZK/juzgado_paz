@@ -130,9 +130,8 @@
                   </div>
                   <div class="text-sm-end border-top border-sm-0 pt-2 pt-sm-0">
                     <span class="badge bg-secondary-subtle text-primary border border-secondary-subtle px-2 py-1 small fw-bold">
-                      Según Modalidad y Destino
+                      Según cantidad de firmas
                     </span>
-                    <div class="small text-muted mt-1">600 UT (países limítrofes) / 800 UT (amplia al exterior)</div>
                   </div>
                 </div>
               </div>
@@ -174,9 +173,9 @@
                     <i class="bi bi-check-lg fw-bold"></i>
                   </div>
                   <div class="flex-grow-1">
-                    <div class="check-item-title">DNI y/o Pasaporte de los Progenitores</div>
+                    <div class="check-item-title">DNI Físico / Digital de los Progenitores</div>
                     <p class="check-item-desc">
-                      Original y fotocopia vigente del Documento Nacional de Identidad de ambos progenitores autorizantes (o tutor judicial con testimonio).
+                      Documento de identidad físico o digital desde la aplicación "Mi Argentina" de ambos progenitores/tutores.
                     </p>
                   </div>
                 </div>
@@ -187,9 +186,9 @@
                     <i class="bi bi-check-lg fw-bold"></i>
                   </div>
                   <div class="flex-grow-1">
-                    <div class="check-item-title">DNI y Pasaporte del Menor</div>
+                    <div class="check-item-title">Acta de Nacimiento del Menor (actualizada)</div>
                     <p class="check-item-desc">
-                      Original y copia del DNI y/o Pasaporte vigente del menor según el país de destino (países del Mercosur con DNI tarjeta, resto del mundo con Pasaporte).
+                      Acta de nacimiento original del menor actualizada (un acta se considera actualizada si se realizó en un plazo no mayor a los últimos 6 meses).
                     </p>
                   </div>
                 </div>
@@ -200,52 +199,12 @@
                     <i class="bi bi-check-lg fw-bold"></i>
                   </div>
                   <div class="flex-grow-1">
-                    <div class="check-item-title">Partida de Nacimiento Legalizada</div>
+                    <div class="check-item-title">Datos del Tercero Acompañante</div>
                     <p class="check-item-desc">
-                      Acta o partida de nacimiento original legalizada o actualizada, para corroborar la filiación ante las autoridades de frontera.
+                      Nombre completo, DNI, teléfono y domicilio de la persona mayor de edad responsable que acompañará al menor en el exterior.
                     </p>
                   </div>
                 </div>
-
-                <!-- Requisito 4 -->
-                <div class="check-item" onclick="toggleViajeExtCheck(this)" role="checkbox" aria-checked="false" tabindex="0">
-                  <div class="check-box-indicator">
-                    <i class="bi bi-check-lg fw-bold"></i>
-                  </div>
-                  <div class="flex-grow-1">
-                    <div class="check-item-title">Datos del Tercero Acompañante (si no viaja con padres)</div>
-                    <p class="check-item-desc">
-                      Nombre completo, DNI, Pasaporte, nacionalidad y domicilio de la persona mayor de edad responsable que acompañará al menor en el exterior.
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Requisito 5 -->
-                <div class="check-item" onclick="toggleViajeExtCheck(this)" role="checkbox" aria-checked="false" tabindex="0">
-                  <div class="check-box-indicator">
-                    <i class="bi bi-check-lg fw-bold"></i>
-                  </div>
-                  <div class="flex-grow-1">
-                    <div class="check-item-title">Alcance Geográfico y Temporal</div>
-                    <p class="check-item-desc">
-                      Definir si se autoriza a países determinados o con <strong>carácter amplio a cualquier país del mundo hasta la mayoría de edad (18 años)</strong>.
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Requisito 6 -->
-                <div class="check-item" onclick="toggleViajeExtCheck(this)" role="checkbox" aria-checked="false" tabindex="0">
-                  <div class="check-box-indicator">
-                    <i class="bi bi-check-lg fw-bold"></i>
-                  </div>
-                  <div class="flex-grow-1">
-                    <div class="check-item-title">Constancia de Progenitor Fallecido (si corresponde)</div>
-                    <p class="check-item-desc">
-                      En caso de fallecimiento de uno de los padres, presentar Partida de Defunción original y copia para justificar la comparencia única.
-                    </p>
-                  </div>
-                </div>
-              </div>
 
               <!-- Barra de progreso -->
               <div class="mt-3 pt-2">
@@ -255,8 +214,14 @@
               </div>
             </div>
 
+            <!-- NOTA ORIENTACIÓN DEL PERSONAL -->
+            <div class="personal-guidance-box">
+              <i class="bi bi-person-badge fs-5 text-primary flex-shrink-0"></i>
+              <span>Una vez que te presentes con estos requisitos, el personal del juzgado te guiará durante el resto del trámite.</span>
+            </div>
+
             <!-- SECCIÓN FORMULARIO DEL TRÁMITE / DESCARGA -->
-            <div class="content-section-card" style="border-left: 4px solid var(--jp-navy);">
+            <div class="content-section-card mt-5" style="border-left: 4px solid var(--jp-navy);">
               <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
                 <div>
                   <div class="d-flex align-items-center gap-2 mb-1">
@@ -286,14 +251,70 @@
               </div>
             </div>
 
-            <!-- NOTA ORIENTACIÓN DEL PERSONAL -->
-            <div class="personal-guidance-box">
-              <i class="bi bi-person-badge fs-5 text-primary flex-shrink-0"></i>
-              <span>Una vez que te presentes con estos requisitos, el personal del juzgado te guiará durante el resto del trámite.</span>
+            <!-- Componente: Paso siguiente - Cámara del Crimen (Bootstrap 5) -->
+            <div class="card border-0 rounded-4 shadow-sm position-relative overflow-hidden judicial-step-card p-3 p-md-4 mb-4 mt-5" id="paso-camara-crimen">
+              <!-- Cinta indicadora lateral -->
+              <div class="judicial-ribbon"></div>
+
+              <div class="d-flex flex-column gap-3">
+                <!-- Encabezado con Icono, Título y Badge de Ubicación -->
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+                  <!-- Icono + Textos de Encabezado -->
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="judicial-icon-circle rounded-circle d-flex align-items-center justify-content-center text-white shadow-sm flex-shrink-0">
+                      <!-- Icono de tribunal / juzgado -->
+                      <i class="bi bi-bank2 fs-5"></i>
+                    </div>
+                    <div>
+                      <span class="d-block text-uppercase fw-bold judicial-eyebrow">
+                        TRÁMITE DE DOS INSTANCIAS OBLIGATORIO
+                      </span>
+                      <h2 class="h5 mb-0 fw-bold judicial-title">
+                        Paso final: Cámara del Crimen
+                      </h2>
+                    </div>
+                  </div>
+
+                  <!-- Badge de Ubicación -->
+                  <div class="badge-ubicacion bg-white rounded-pill px-3 py-1 d-inline-flex align-items-center gap-2 shadow-sm">
+                    <i class="bi bi-geo-alt-fill judicial-text-secondary fs-6"></i>
+                    <span class="fw-semibold">Calle 11 entre 8 y 10, Sáenz Peña</span>
+                  </div>
+                </div>
+
+                <!-- Bloque de contenido principal (Tarjeta blanca interna) -->
+                <div class="bg-white rounded-3 p-3 p-md-4 shadow-sm">
+                  <p class="mb-0 judicial-body-text leading-relaxed">
+                    Una vez completado el trámite en el Juzgado de Paz, debés dirigirte a Cámara del Crimen (calle 11, entre 8 y 10) para el sellado final. Allí se colocará el "sello de agua" utilizando las 4 estampillas abrochadas al trámite en el juzgado. El costo total del trámite, incluidas las estampillas, se abona en el Juzgado de Paz.
+                  </p>
+                </div>
+
+                <!-- Chips informativos / 3 características inferiores -->
+                <div class="row g-2 pt-1">
+                  <div class="col-12 col-sm-4">
+                    <div class="d-flex align-items-center gap-2 judicial-feature-item">
+                      <i class="bi bi-patch-check-fill judicial-text-secondary fs-5"></i>
+                      <span class="fw-medium text-dark">Sello de agua</span>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-4">
+                    <div class="d-flex align-items-center gap-2 judicial-feature-item">
+                      <i class="bi bi-paperclip judicial-text-secondary fs-5"></i>
+                      <span class="fw-medium text-dark">4 estampillas judiciales</span>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-4">
+                    <div class="d-flex align-items-center gap-2 judicial-feature-item">
+                      <i class="bi bi-check-circle-fill judicial-text-secondary fs-5"></i>
+                      <span class="fw-medium text-dark">Sin costos adicionales allá</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- PASOS DEL TRÁMITE EN SEDE -->
-            <div class="content-section-card">
+            <div class="content-section-card  mt-5">
               <div class="d-flex align-items-center justify-content-between mb-2">
                 <h2 class="requisitos-title mb-0 text-uppercase" style="letter-spacing: 0.04em;">Pasos del Trámite en Sede</h2>
                 <span class="badge bg-light text-secondary border small">Circuito presencial</span>
@@ -303,33 +324,33 @@
                 <!-- Paso 1 -->
                 <div class="paso-box">
                   <div class="paso-num">01</div>
-                  <h4 class="paso-title">Recepción y Verificación</h4>
-                  <p class="paso-desc">Cotejo de identidad, partidas y pasaportes en Mesa de Entradas.</p>
-                  <span class="paso-meta">Filiación</span>
+                  <h4 class="paso-title">Mesa de Entradas</h4>
+                  <p class="paso-desc">Control de requisitos de ambos padres y Acta de Nacimiento del menor.</p>
+                  <span class="paso-meta">Control</span>
                 </div>
 
                 <!-- Paso 2 -->
                 <div class="paso-box">
                   <div class="paso-num">02</div>
-                  <h4 class="paso-title">Redacción del Instrumento</h4>
-                  <p class="paso-desc">Determinación de países de destino, acompañante y vigencia temporal.</p>
-                  <span class="paso-meta">Migraciones</span>
+                  <h4 class="paso-title">Certificación y Sellado</h4>
+                  <p class="paso-desc">Estampillado y certificación de firmas de padres autorizantes.</p>
+                  <span class="paso-meta">Certificación</span>
                 </div>
 
                 <!-- Paso 3 -->
-                <div class="paso-box">
-                  <div class="paso-num">03</div>
-                  <h4 class="paso-title">Firma Presencial</h4>
-                  <p class="paso-desc">Firma de los progenitores ante el actuario judicial y pago de arancel.</p>
-                  <span class="paso-meta">Fe Pública</span>
+                <div class="paso-box" style="background-color: #ddedff; border-color: #bae6fd;">
+                  <div class="paso-num" style="background-color: #fbfdff; color: rgb(29, 67, 99);">03</div>
+                  <h4 class="paso-title">Paso Final en Cámara del Crimen</h4>
+                  <p class="paso-desc">Colocación del selo de agua en calle 11 entre 8 y 10 utilizando las 4 estampillas abrochadas a la autorización.</p>
+                  <span class="paso-meta">Cámara del Crimen</span>
                 </div>
 
                 <!-- Paso 4 -->
-                <div class="paso-box" style="background-color: #f0f7ff; border-color: #bae6fd;">
-                  <div class="paso-num" style="background-color: #0369a1;">04</div>
-                  <h4 class="paso-title" style="color: #0369a1;">Testimonio Legalizado</h4>
-                  <p class="paso-desc text-dark">Entrega en mano del documento con sello para presentar en frontera.</p>
-                  <span class="paso-meta text-success">En el acto</span>
+                <div class="paso-box" >
+                  <div class="paso-num" style="background-color: rgb(29, 67, 99);">04</div>
+                  <h4 class="paso-title" style="color: #0369a1;">Autorización finalizada</h4>
+                  <p class="paso-desc text-dark">Listo para presentar ante la Dirección Nacional de Migraciones en pasos fronterizos o aeropuertos.</p>
+                  <span class="paso-meta text-success">Validez internacional</span>
                 </div>
               </div>
 
@@ -342,7 +363,10 @@
           </div>
         </div>
 
-        <!-- COLUMNA LATERAL / SIDEBAR (4 COLS DESKTOP) -->
+        
+
+      </div>
+      <!-- COLUMNA LATERAL / SIDEBAR (4 COLS DESKTOP) -->
         <div class="col-12 col-lg-4">
 
           <!-- CARD SEDE JUDICIAL -->
@@ -454,8 +478,6 @@
           </div>
 
         </div>
-
-      </div>
     </div>
   </main>
 

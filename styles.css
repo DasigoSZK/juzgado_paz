@@ -887,3 +887,84 @@ main {
 .modelo-dec-body {
   padding: 1.25rem 1.4rem;
 }
+
+
+
+
+/* Card de "Cámara de Crimen" (atorizacion-viaje-exterior.html) */
+:root {
+  --jud-primary: #002d4b;          /* Azul marino institucional para títulos */
+  --jud-secondary: #006399;        /* Azul cívico para acentos e íconos */
+  --jud-bg-container: #dce9ff;     /* Celeste suave para el fondo del paso */
+  --jud-text-body: #0b1c30;        /* Texto principal de alta legibilidad */
+}
+
+/* Contenedor principal con fondo suave y borde sutil */
+.judicial-step-card {
+  background-color: var(--jud-bg-container) !important;
+  border-radius: 0.75rem !important; /* 12px redondeado armónico */
+  border: 1px solid rgba(0, 99, 153, 0.12) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cinta indicadora lateral de 6px */
+.judicial-ribbon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 6px;
+  background-color: var(--jud-secondary);
+  z-index: 1;
+}
+
+/* Círculo contenedor del icono institucional */
+.judicial-icon-circle {
+  width: 44px;
+  height: 44px;
+  background-color: var(--jud-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Subtítulo superior (eyebrow) */
+.judicial-eyebrow {
+  color: var(--jud-secondary);
+  font-size: 0.75rem; /* 12px */
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+
+/* Título principal del paso */
+.judicial-title {
+  color: var(--jud-primary);
+  letter-spacing: -0.015em;
+}
+
+/* Badge de ubicación */
+.badge-ubicacion {
+  font-size: 0.8125rem; /* 13px */
+  border: 1px solid rgba(0, 99, 153, 0.1);
+  color: var(--jud-primary);
+}
+
+/* Color para íconos secundarios */
+.judicial-text-secondary {
+  color: var(--jud-secondary) !important;
+}
+
+/* Párrafo explicativo con interlineado cómodo */
+.judicial-body-text {
+  color: var(--jud-text-body);
+  font-size: 1.0625rem; /* 17px */
+  line-height: 1.65;
+}
+
+/* Items informativos inferiores */
+.judicial-feature-item {
+  font-size: 0.875rem; /* 14px */
+  color: var(--jud-text-body);
+}

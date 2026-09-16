@@ -54,21 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
           textEl.textContent = item.declaracion;
         }
 
-        // Manejo de Ícono / Imagen referencial
-        const imgEl = clone.querySelector('.modelo-icon-img');
-        const fallbackIcon = clone.querySelector('.modelo-icon-fallback');
-
-        if (item.imagen && imgEl) {
-          imgEl.src = item.imagen;
-          imgEl.alt = item.titulo;
-          imgEl.onload = () => {
-            imgEl.style.display = 'inline-block';
-            if (fallbackIcon) fallbackIcon.style.display = 'none';
-          };
-          imgEl.onerror = () => {
-            imgEl.style.display = 'none';
-            if (fallbackIcon) fallbackIcon.style.display = 'inline-block';
-          };
+        // Manejo de ícono
+        const acordionIcon = clone.querySelector('.modelo-icon-fallback');
+        console.log(acordionIcon);
+        if(item.icon){
+          acordionIcon.classList.add('bi', item.icon);
+        }else{
+          acordionIcon.classList.add('bi', 'bi-file-earmark-text');
         }
 
         // Botón para copiar texto al portapapeles

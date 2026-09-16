@@ -1,32 +1,32 @@
 [
   {
-    "imagen": "assets/icons/familiar-a-cargo.png",
+    "icon": "bi-people-fill",
     "titulo": "Familiar a Cargo",
     "declaracion": "Tengo a mi cargo y cuidado a …….., DNI: …….., en el domicilio ubicado en ………………… por cuestiones de salud/enfermedad."
   },
   {
-    "imagen": "assets/icons/posesion-moto.png",
+    "icon": "bi-bicycle",
     "titulo": "Posesión de Moto",
     "declaracion": "Soy poseedor de una motocicleta identificada como: Marca …………………., Modelo ………………..….., Cuadro/Chasis N° ……………………….…, Motor N°……………………., Color ……………….."
   },
   {
-    "imagen": "assets/icons/no-asignacion-familiar.png",
+    "icon": "bi-person-dash-fill",
     "titulo": "No percepción de asignación familiar",
     "declaracion": "No percibo ningún tipo de salario, asignación, o beneficio social por parte del Estado respecto a mi hijo/a ……..…..….., DNI ………….….."
   },
   {
-    "imagen": "assets/icons/falta-ingresos.png",
+    "icon": "bi-currency-dollar",
     "titulo": "Falta de ingresos",
     "declaracion": "Declaro bajo juramento de ley que actualmente no poseo trabajo registrado ni percibo ingresos fijos."
   },
   {
-    "imagen": "assets/icons/no-ejercicio-profesional.png",
+    "icon": "bi-briefcase-fill",
     "titulo": "No ejercicio profesional en el domicilio",
     "declaracion": "Declaro bajo juramento de ley que no ejerzo la profesión de ……………….. en el domicilio sito en …………………….. de la ciudad de Presidencia Roque Sáenz Peña."
   },
   {
-    "imagen": "assets/icons/beca-uncaus.png",
-    "titulo": "Beca UNCAUS",
+    "icon": "bi-mortarboard-fill",
+    "titulo": "Beca Universitaria de Comedor",
     "declaracion": "Opción 1 (Sin dependencia económica parental):\n«No dependo económicamente de mis padres y tengo unos ingresos mensuales de $…… provenientes de ……»\n\nOpción 2 (Con dependencia económica parental):\n«Dependo económicamente de mis padres que tienen un ingreso mensual aproximado de $……… provenientes de actividades de …….»"
   }
 ]
