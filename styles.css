@@ -157,6 +157,12 @@ main {
   height: 60vh;
 }
 
+@media screen and (max-width: 600px) {
+  .hero-judicial {
+    background-position: 47% 50%;
+  }
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
