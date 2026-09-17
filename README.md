@@ -38,7 +38,7 @@ Requiere únicamente cambiar de manera manual 1 variable llamada "valor_ut_actua
 
 2. "declaraciones.js"
 Script asociado únicamente a la pagina "declaraciones-juradas.html".
-Se encarga de consumir dinámicamente un archivo JSON local llamado "dec_juradas.json" para armar una serie de elementos "<summary>" y "<details>".
+Se encarga de consumir dinámicamente un archivo JSON local llamado "dec_juradas.json" para armar una serie de elementos `<summary>` y `<details>`.
 Permite agregar/modificar/eliminar modelos de "sugerencias de declaraciones juradas" fácilmente desde el archivo JSON.
 
 
