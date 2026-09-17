@@ -28,5 +28,15 @@
     "icon": "bi-mortarboard-fill",
     "titulo": "Beca Universitaria de Comedor",
     "declaracion": "Opción 1 (Sin dependencia económica parental):\n«No dependo económicamente de mis padres y tengo unos ingresos mensuales de $…… provenientes de ……»\n\nOpción 2 (Con dependencia económica parental):\n«Dependo económicamente de mis padres que tienen un ingreso mensual aproximado de $……… provenientes de actividades de …….»"
+  },
+  {
+    "icon": "bi-cash-coin",
+    "titulo": "Ingresos para IPDUV (Viviendas)",
+    "declaracion": "Percibo unos ingresos mensuales aproximados de $............ \nprovenientes de mis servicios de ..... / provenientes de mi emprendimiento de .........."
+  },
+  {
+    "icon": "bi-house-heart-fill",
+    "titulo": "Casados pero con diferentes domicilios",
+    "declaracion": "Me encontraba casada legalmente con el señor/a ......., DNI: .........., durante ...... años, hasta la fecha de su fallecimiento ocurrido el día ...... del mes ...... del año .......\nManifiesto que jamás estuvimos separados de hecho y que el domicilio conyugal siempre feu en calle .........\nEl cambio de domicilio no se realizó por motivos .........."
   }
 ]
