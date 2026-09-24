@@ -385,6 +385,134 @@
         <p class="text-muted small mb-0">Pruebe buscando palabras como "viaje", "firma", "copias" o "carta".</p>
       </div>
 
+      <!-- COMPONENTE: CALCULADORA DE ESTAMPILLAS -->
+      <div class="container my-4" style="max-width: 820px;">
+        <div class="card border border-light-subtle shadow-sm rounded-4 p-4 p-md-5 bg-white">
+          
+          <!-- Encabezado / Título Centrado -->
+          <div class="text-center mb-4">
+            <h2 class="fw-bold text-dark mb-1" style="color: #1d4363 !important;">Calculadora de Estampillas</h2>
+            <p class="text-secondary small mb-0">Herramienta de cómputo referencial para estimación de tasas judiciales y estampillado.</p>
+          </div>
+
+          <!-- Banner de Total Centrado -->
+          <div class="card bg-light border border-light-subtle text-center py-4 px-3 mb-4 rounded-3 shadow-none">
+            <span class="text-uppercase text-secondary fw-bold small tracking-wider d-block mb-1" style="font-size: 0.75rem; letter-spacing: 0.05em;">TOTAL ESTIMADO</span>
+            <div id="displayTotal" class="display-6 fw-bold text-primary my-1" style="color: #1d4363 !important;">
+              TOTAL: $0,00
+            </div>
+            <small id="displayTotalUt" class="text-secondary fw-medium">0 UT acumuladas</small>
+          </div>
+
+          <!-- Contenedor Principal: Responsivo 1 columna (mobile: col-12) / 2 columnas (desktop/tablet: col-md-6) -->
+          <div class="row g-4 mb-4">
+            
+            <!-- Sección 1: Fotocopias -->
+            <div class="col-12 col-md-6">
+              <div class="h-100 p-3 p-sm-4 border border-light-subtle rounded-3 bg-white d-flex flex-column justify-content-between">
+                <div>
+                  <div class="d-flex align-items-center gap-2 pb-2 mb-3 border-bottom">
+                    <h5 class="fw-bold mb-0" style="color: #1d4363;">Fotocopias</h5>
+                  </div>
+
+                  <!-- Fila: Copias "Rojas" -->
+                  <div class="mb-3 d-flex align-items-center justify-content-between gap-2">
+                    <label for="inputCopiasRojas" class="form-label mb-0 fw-medium text-secondary">Copias "Rojas":</label>
+                    <input 
+                      type="number" 
+                      id="inputCopiasRojas" 
+                      class="form-control text-center fw-bold border-secondary-subtle" 
+                      value="0" 
+                      min="0" 
+                      style="max-width: 95px;"
+                    >
+                  </div>
+
+                  <!-- Fila: Copias "Azules" -->
+                  <div class="mb-3 d-flex align-items-center justify-content-between gap-2">
+                    <label for="inputCopiasAzules" class="form-label mb-0 fw-medium text-secondary">Copias "Azules":</label>
+                    <input 
+                      type="number" 
+                      id="inputCopiasAzules" 
+                      class="form-control text-center fw-bold border-secondary-subtle" 
+                      value="0" 
+                      min="0" 
+                      style="max-width: 95px;"
+                    >
+                  </div>
+
+                  <!-- Fila Calculada: Total Copias -->
+                  <div class="pt-3 border-top d-flex align-items-center justify-content-between gap-2 mb-2">
+                    <span class="fw-bold text-dark">Total:</span>
+                    <div id="displayTotalCopias" class="form-control-plaintext text-center fw-bold bg-light rounded border border-light-subtle px-3 py-1" style="max-width: 95px;">
+                      0
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Detalle de Subtotal Fotocopias -->
+                <div class="d-flex justify-content-between align-items-center text-secondary small pt-2 border-top">
+                  <span>Subtotal Copias (100 UT = $1.600 c/u):</span>
+                  <span id="displaySubtotalCopias" class="fw-bold text-dark">$0,00</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sección 2: Firmas -->
+            <div class="col-12 col-md-6">
+              <div class="h-100 p-3 p-sm-4 border border-light-subtle rounded-3 bg-white d-flex flex-column justify-content-between">
+                <div>
+                  <div class="d-flex align-items-center gap-2 pb-2 mb-3 border-bottom">
+                    <h5 class="fw-bold mb-0" style="color: #1d4363;">Firmas</h5>
+                  </div>
+
+                  <!-- Fila: Cantidad de Firmas -->
+                  <div class="mb-3 d-flex align-items-center justify-content-between gap-2">
+                    <label for="inputCantidadFirmas" class="form-label mb-0 fw-medium text-secondary">Cantidad de Firmas:</label>
+                    <input 
+                      type="number" 
+                      id="inputCantidadFirmas" 
+                      class="form-control text-center fw-bold border-secondary-subtle" 
+                      value="0" 
+                      min="0" 
+                      style="max-width: 95px;"
+                    >
+                  </div>
+
+                  <p class="text-secondary small mb-3 lh-sm">
+                    Arancel por certificación de rúbrica ante actuario judicial (200 UT por firma).
+                  </p>
+                </div>
+
+                <!-- Fila Calculada: Subtotal Firmas -->
+                <div class="pt-3 border-top d-flex align-items-center justify-content-between gap-2">
+                  <span class="fw-bold text-dark">Subtotal Firmas:</span>
+                  <div id="displaySubtotalFirmas" class="form-control-plaintext text-center fw-bold bg-light rounded border border-light-subtle px-3 py-1" style="max-width: 95px;">
+                    $0,00
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Pie del Componente: Referencia y Botón Reiniciar -->
+          <div class="pt-3 border-top d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+            <small class="text-secondary fw-medium">
+              Unidad Tributaria referencial: <span class="badge text-bg-light border">1 UT = $16</span>
+            </small>
+            <button 
+              type="button" 
+              id="btnReiniciarCalculadora" 
+              class="btn btn-sm btn-outline-secondary d-inline-flex align-items-center gap-1 px-3 py-1.5"
+            >
+              Reiniciar calculadora
+            </button>
+          </div>
+
+        </div>
+      </div>
+
       <!-- SECCIÓN ATENCIÓN PRESENCIAL AL CIUDADANO -->
       <div class="card mt-4 mt-lg-5 border-0 shadow-sm rounded-4 overflow-hidden" id="atencion-presencial" style="background-color: #ffffff; border: 1px solid #e2e8f0 !important;">
         <div class="card-body p-4 p-lg-4">
@@ -461,7 +589,85 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
   <!-- Lógica dinámica de precios según el valor actual de la UT -->
-  <script src="./precios.js"></script>
+  <script type="module" src="./precios.js"></script>
+  <!-- LÓGICA DE CÁLCULO DINÁMICO INLINE -->
+  <script>
+    (function() {
+      const VALOR_UT = 16;
+      const UT_POR_COPIA = 100;
+      const UT_POR_FIRMA = 200;
+
+      const outTotalCopias = document.getElementById('displayTotalCopias');
+      const inRojas = document.getElementById('inputCopiasRojas');
+      const inAzules = document.getElementById('inputCopiasAzules');
+      const inFirmas = document.getElementById('inputCantidadFirmas');
+      const outSubtotalCopias = document.getElementById('displaySubtotalCopias');
+      const outSubtotalFirmas = document.getElementById('displaySubtotalFirmas');
+      const outTotal = document.getElementById('displayTotal');
+      const outTotalUt = document.getElementById('displayTotalUt');
+      const btnReset = document.getElementById('btnReiniciarCalculadora');
+
+      function formatearPesos(monto) {
+        return '$' + monto.toLocaleString('es-AR', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        });
+      }
+
+      function recalcular() {
+        const rojas = Math.max(0, parseInt(inRojas.value, 10) || 0);
+        const azules = Math.max(0, parseInt(inAzules.value, 10) || 0);
+        const firmas = Math.max(0, parseInt(inFirmas.value, 10) || 0);
+
+        // 1. Total Copias (suma combinada de Copias Rojas + Azules)
+        const totalCopias = rojas + azules;
+        if (outTotalCopias) {
+          outTotalCopias.textContent = totalCopias;
+        }
+
+        // 2. Cómputo de Unidades Tributarias (UT)
+        const utCopias = totalCopias * UT_POR_COPIA;
+        const utFirmas = firmas * UT_POR_FIRMA;
+        const totalUT = utCopias + utFirmas;
+
+        // 3. Montos en pesos ($)
+        const pesosCopias = utCopias * VALOR_UT;
+        const pesosFirmas = utFirmas * VALOR_UT;
+        const totalPesos = totalUT * VALOR_UT;
+
+        if (outSubtotalCopias) {
+          outSubtotalCopias.textContent = formatearPesos(pesosCopias);
+        }
+        if (outSubtotalFirmas) {
+          outSubtotalFirmas.textContent = formatearPesos(pesosFirmas);
+        }
+        if (outTotal) {
+          outTotal.textContent = 'TOTAL: ' + formatearPesos(totalPesos);
+        }
+        if (outTotalUt) {
+          outTotalUt.textContent = totalUT.toLocaleString('es-AR') + ' UT acumuladas';
+        }
+      }
+
+      [inRojas, inAzules, inFirmas].forEach(function(inputEl) {
+        if (inputEl) {
+          inputEl.addEventListener('input', recalcular);
+          inputEl.addEventListener('change', recalcular);
+        }
+      });
+
+      if (btnReset) {
+        btnReset.addEventListener('click', function() {
+          if (inRojas) inRojas.value = 0;
+          if (inAzules) inAzules.value = 0;
+          if (inFirmas) inFirmas.value = 0;
+          recalcular();
+        });
+      }
+
+      recalcular();
+    })();
+  </script>
 
   <!-- Script de Búsqueda y Filtrado en vivo -->
   <script>
