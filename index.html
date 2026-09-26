@@ -25,8 +25,6 @@
   <!-- Favicon -->
   <link rel="icon" href="./assets/imgs/favicon_paz.svg" type="image/x-icon">
 
-  <!-- Lógica de precios UT dinámica -->
-  <script src="./precios.js" defer></script>
 </head>
 <body>
 
@@ -421,7 +419,7 @@
                     <input 
                       type="number" 
                       id="inputCopiasRojas" 
-                      class="form-control text-center fw-bold border-secondary-subtle" 
+                      class="input_copias form-control text-center fw-bold border-secondary-subtle" 
                       value="0" 
                       min="0" 
                       style="max-width: 95px;"
@@ -434,7 +432,7 @@
                     <input 
                       type="number" 
                       id="inputCopiasAzules" 
-                      class="form-control text-center fw-bold border-secondary-subtle" 
+                      class="input_copias form-control text-center fw-bold border-secondary-subtle" 
                       value="0" 
                       min="0" 
                       style="max-width: 95px;"
@@ -452,7 +450,7 @@
 
                 <!-- Detalle de Subtotal Fotocopias -->
                 <div class="d-flex justify-content-between align-items-center text-secondary small pt-2 border-top">
-                  <span>Subtotal Copias (100 UT = $1.600 c/u):</span>
+                  <span>Subtotal Copias:</span>
                   <span id="displaySubtotalCopias" class="fw-bold text-dark">$0,00</span>
                 </div>
               </div>
@@ -472,7 +470,7 @@
                     <input 
                       type="number" 
                       id="inputCantidadFirmas" 
-                      class="form-control text-center fw-bold border-secondary-subtle" 
+                      class="input_copias form-control text-center fw-bold border-secondary-subtle" 
                       value="0" 
                       min="0" 
                       style="max-width: 95px;"
@@ -499,7 +497,7 @@
           <!-- Pie del Componente: Referencia y Botón Reiniciar -->
           <div class="pt-3 border-top d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
             <small class="text-secondary fw-medium">
-              Unidad Tributaria referencial: <span class="badge text-bg-light border">1 UT = $16</span>
+              Unidad Tributaria referencial: <span class="calc_estampillas_ut_ref badge text-bg-light border"></span>
             </small>
             <button 
               type="button" 
@@ -588,87 +586,6 @@
   <!-- Bootstrap 5 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-  <!-- Lógica dinámica de precios según el valor actual de la UT -->
-  <script type="module" src="./precios.js"></script>
-  <!-- LÓGICA DE CÁLCULO DINÁMICO INLINE -->
-  <script>
-    (function() {
-      const VALOR_UT = 16;
-      const UT_POR_COPIA = 100;
-      const UT_POR_FIRMA = 200;
-
-      const outTotalCopias = document.getElementById('displayTotalCopias');
-      const inRojas = document.getElementById('inputCopiasRojas');
-      const inAzules = document.getElementById('inputCopiasAzules');
-      const inFirmas = document.getElementById('inputCantidadFirmas');
-      const outSubtotalCopias = document.getElementById('displaySubtotalCopias');
-      const outSubtotalFirmas = document.getElementById('displaySubtotalFirmas');
-      const outTotal = document.getElementById('displayTotal');
-      const outTotalUt = document.getElementById('displayTotalUt');
-      const btnReset = document.getElementById('btnReiniciarCalculadora');
-
-      function formatearPesos(monto) {
-        return '$' + monto.toLocaleString('es-AR', {
-          minimumFractionDigits: 2,
-          maximumFractionDigits: 2
-        });
-      }
-
-      function recalcular() {
-        const rojas = Math.max(0, parseInt(inRojas.value, 10) || 0);
-        const azules = Math.max(0, parseInt(inAzules.value, 10) || 0);
-        const firmas = Math.max(0, parseInt(inFirmas.value, 10) || 0);
-
-        // 1. Total Copias (suma combinada de Copias Rojas + Azules)
-        const totalCopias = rojas + azules;
-        if (outTotalCopias) {
-          outTotalCopias.textContent = totalCopias;
-        }
-
-        // 2. Cómputo de Unidades Tributarias (UT)
-        const utCopias = totalCopias * UT_POR_COPIA;
-        const utFirmas = firmas * UT_POR_FIRMA;
-        const totalUT = utCopias + utFirmas;
-
-        // 3. Montos en pesos ($)
-        const pesosCopias = utCopias * VALOR_UT;
-        const pesosFirmas = utFirmas * VALOR_UT;
-        const totalPesos = totalUT * VALOR_UT;
-
-        if (outSubtotalCopias) {
-          outSubtotalCopias.textContent = formatearPesos(pesosCopias);
-        }
-        if (outSubtotalFirmas) {
-          outSubtotalFirmas.textContent = formatearPesos(pesosFirmas);
-        }
-        if (outTotal) {
-          outTotal.textContent = 'TOTAL: ' + formatearPesos(totalPesos);
-        }
-        if (outTotalUt) {
-          outTotalUt.textContent = totalUT.toLocaleString('es-AR') + ' UT acumuladas';
-        }
-      }
-
-      [inRojas, inAzules, inFirmas].forEach(function(inputEl) {
-        if (inputEl) {
-          inputEl.addEventListener('input', recalcular);
-          inputEl.addEventListener('change', recalcular);
-        }
-      });
-
-      if (btnReset) {
-        btnReset.addEventListener('click', function() {
-          if (inRojas) inRojas.value = 0;
-          if (inAzules) inAzules.value = 0;
-          if (inFirmas) inFirmas.value = 0;
-          recalcular();
-        });
-      }
-
-      recalcular();
-    })();
-  </script>
-
   <!-- Script de Búsqueda y Filtrado en vivo -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -708,5 +625,8 @@
       }
     });
   </script>
+  
+  <!-- Lógica de precios y calculadora de estampillas -->
+  <script type="module" src="./index.js" defer></script>
 </body>
 </html>
