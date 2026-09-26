@@ -23,5 +23,10 @@ d.addEventListener("click", (e) => {
     d.getElementById('inputCopiasRojas').value = 0;
     d.getElementById('inputCopiasAzules').value = 0;
     d.getElementById('inputCantidadFirmas').value = 0;
+    d.getElementById("displayTotal").textContent = "TOTAL: $0,00";
+    d.getElementById("displayTotalUt").textContent = "0 UT acumulados";
+    d.getElementById("displaySubtotalCopias").textContent = "$0,00";
+    d.getElementById("displaySubtotalFirmas").textContent = "$0,00";
+
 
 })
