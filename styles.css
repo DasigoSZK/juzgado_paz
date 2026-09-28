@@ -974,3 +974,23 @@ main {
   font-size: 0.875rem; /* 14px */
   color: var(--jud-text-body);
 }
+
+
+
+/* --------------------------------------------------------- */
+
+/* Estilos de componente "Calculadora de Estampillas" */
+.stamp-calc .no-spin::-webkit-inner-spin-button,
+.stamp-calc .no-spin::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.stamp-calc .no-spin {
+  -moz-appearance: textfield;
+}
+.stamp-calc .border-dashed {
+  border-style: dashed !important;
+}
+.stamp-calc .stamp-card-inner {
+  min-height: 108px;
+}
