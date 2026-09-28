@@ -84,7 +84,7 @@ function resumen(valorUT, $elementosConValorUT){
     pago = Number(d.getElementById("input-pago").value);
     $vuelto.innerHTML = pago >= importeTotal 
                         ? (pago - importeTotal).toLocaleString('es-AR', {style: 'currency', currency: 'ARS'}) 
-                        : ` <span class='text-danger'> Pago insuficiente <small>(faltan ${(importeTotal - pago).toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})})<small/><span/>`;
+                        : ` <span class='text-danger' style='font-size: 0.9rem;'> Pago insuficiente <small>(faltan ${(importeTotal - pago).toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})})<small/><span/>`;
 };
 
 // Reinicia los valores de la "Calculadora de Estampillas" a 0
@@ -93,6 +93,7 @@ function reiniciarCalculadora($elementosConValorUT, valorUT){
     $elementosConValorUT.forEach(el => {
         el.value = 0;
     })
+    d.getElementById("input-pago").value = 0;
     resumen(valorUT, $elementosConValorUT);
 }
 
