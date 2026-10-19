@@ -56,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Manejo de ícono
         const acordionIcon = clone.querySelector('.modelo-icon-fallback');
-        console.log(acordionIcon);
         if(item.icon){
           acordionIcon.classList.add('bi', item.icon);
         }else{

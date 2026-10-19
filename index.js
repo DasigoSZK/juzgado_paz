@@ -14,7 +14,6 @@ d.addEventListener('input', (e) => {
 
     // Si no es un input de copias, firmas, o el de pago, no hacer nada
     if(!e.target.matches(".input-ut") && !e.target.matches("#input-pago")) return;
-    console.log("test")
     // Actualizar el "resumen" de la "Calculadora de Estampillas"
     resumen(valorUT, $elementosConValorUT);
 
@@ -70,11 +69,6 @@ function resumen(valorUT, $elementosConValorUT){
     
     importeTotal = Number(acuUT) * valorUT;
 
-    console.log("Acumulado Rojas: " + acuRojas);
-    console.log("Acumulado Azules: " + acuAzules);
-    console.log("Acumulado UT: " + acuUT);
-    console.log("Importe total: " + importeTotal);
-
     // Actualiza la sección "resumen" de la calculadora de estampillas
     // Estampilllas rojas, azules e importe
     d.getElementById("span-total-rojas").textContent = acuRojas;
@@ -96,34 +90,3 @@ function reiniciarCalculadora($elementosConValorUT, valorUT){
     d.getElementById("input-pago").value = 0;
     resumen(valorUT, $elementosConValorUT);
 }
-
-
-
-
-
-/* Código viejo */
-// d.addEventListener('input', (e)=> {
-
-//     // Si no es un input de copias, no hacer nada
-//     if(!e.target.matches(".input_copias")) return;
-
-//     // Actualizar la calculadora de estampillas con el valor actual de la UT
-//     calculadoraEstampillas(valor_ut_actual);
-// })
-
-// d.addEventListener("click", (e) => {
-//     // Si no es el botón de reiniciar, no hacer nada
-//     if(!e.target.matches("#btnReiniciarCalculadora")) return;
-
-
-//     // Reiniciar los valores de los inputs a 0
-//     d.getElementById('inputCopiasRojas').value = 0;
-//     d.getElementById('inputCopiasAzules').value = 0;
-//     d.getElementById('inputCantidadFirmas').value = 0;
-//     d.getElementById("displayTotal").textContent = "TOTAL: $0,00";
-//     d.getElementById("displayTotalUt").textContent = "0 UT acumulados";
-//     d.getElementById("displaySubtotalCopias").textContent = "$0,00";
-//     d.getElementById("displaySubtotalFirmas").textContent = "$0,00";
-
-
-// })
