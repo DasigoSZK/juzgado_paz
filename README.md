@@ -24,7 +24,10 @@ La página web consta de 10 páginas:
 
 
 ## 💻Tecnologías 
-Es un proyecto frontend básico, utiliza: HTML, CSS, Bootstrap y JavaScript.
+Es un proyecto frontend estático (sin build ni dependencias), publicado en GitHub Pages. Utiliza: HTML, CSS, Bootstrap (CDN) y JavaScript.
+
+Para probarlo localmente basta un servidor estático en la raíz del proyecto, por ejemplo:
+`python -m http.server 8000` o la extensión "Live Server" de VS Code.
 
 
 ## 🔧Mantenimiento
@@ -37,7 +40,7 @@ Se encarga de actualizar los precios en todas las páginas web cuando hay un cam
 Requiere únicamente cambiar de manera manual 1 variable llamada "valor_ut_actual".
 
 2. "declaraciones.js"
-Script asociado únicamente a la pagina "declaraciones-juradas.html".
+Script asociado únicamente a la página "declaracion-jurada.html".
 Se encarga de consumir dinámicamente un archivo JSON local llamado "dec_juradas.json" para armar una serie de elementos `<summary>` y `<details>`.
 Permite agregar/modificar/eliminar modelos de "sugerencias de declaraciones juradas" fácilmente desde el archivo JSON.
 
