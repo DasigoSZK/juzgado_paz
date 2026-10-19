@@ -2,17 +2,17 @@
   {
     "icon": "bi-people-fill",
     "titulo": "Familiar a Cargo",
-    "declaracion": "Tengo a mi cargo y cuidado a …….., DNI: …….., en el domicilio ubicado en ………………… por cuestiones de salud/enfermedad."
+    "declaracion": "Tengo a mi cargo y cuidado a ..., DNI: ..., en el domicilio ubicado en ... por cuestiones de salud/enfermedad."
   },
   {
     "icon": "bi-bicycle",
     "titulo": "Posesión de Moto",
-    "declaracion": "Soy poseedor de una motocicleta identificada como: Marca …………………., Modelo ………………..….., Cuadro/Chasis N° ……………………….…, Motor N°……………………., Color ……………….."
+    "declaracion": "Soy poseedor de una motocicleta identificada como: Marca ..., Modelo ..., Cuadro/Chasis N° ..., Motor N° ..., Color ..."
   },
   {
     "icon": "bi-person-dash-fill",
     "titulo": "No percepción de asignación familiar",
-    "declaracion": "No percibo ningún tipo de salario, asignación, o beneficio social por parte del Estado respecto a mi hijo/a ……..…..….., DNI ………….….."
+    "declaracion": "No percibo ningún tipo de salario, asignación, o beneficio social por parte del Estado respecto a mi hijo/a ..., DNI ..."
   },
   {
     "icon": "bi-currency-dollar",
@@ -22,21 +22,41 @@
   {
     "icon": "bi-briefcase-fill",
     "titulo": "No ejercicio profesional en el domicilio",
-    "declaracion": "Declaro bajo juramento de ley que no ejerzo la profesión de ……………….. en el domicilio sito en …………………….. de la ciudad de Presidencia Roque Sáenz Peña."
+    "declaracion": "Declaro bajo juramento de ley que no ejerzo la profesión de ... en el domicilio sito en ... de la ciudad de Presidencia Roque Sáenz Peña."
   },
   {
     "icon": "bi-mortarboard-fill",
     "titulo": "Beca Universitaria de Comedor",
-    "declaracion": "Opción 1 (Sin dependencia económica parental):\n«No dependo económicamente de mis padres y tengo unos ingresos mensuales de $…… provenientes de ……»\n\nOpción 2 (Con dependencia económica parental):\n«Dependo económicamente de mis padres que tienen un ingreso mensual aproximado de $……… provenientes de actividades de …….»"
+    "declaracion": "Opción 1 (Sin dependencia económica parental):\n«No dependo económicamente de mis padres y tengo unos ingresos mensuales de $... provenientes de ...»\n\nOpción 2 (Con dependencia económica parental):\n«Dependo económicamente de mis padres que tienen un ingreso mensual aproximado de $... provenientes de actividades de ...»"
   },
   {
     "icon": "bi-cash-coin",
     "titulo": "Ingresos para IPDUV (Viviendas)",
-    "declaracion": "Percibo unos ingresos mensuales aproximados de $............ \nprovenientes de mis servicios de ..... / provenientes de mi emprendimiento de .........."
+    "declaracion": "Percibo unos ingresos mensuales aproximados de $... \nprovenientes de mis servicios de ... / provenientes de mi emprendimiento de ..."
   },
   {
     "icon": "bi-house-heart-fill",
     "titulo": "Casados pero con diferentes domicilios",
-    "declaracion": "Me encontraba casada legalmente con el señor/a ......., DNI: .........., durante ...... años, hasta la fecha de su fallecimiento ocurrido el día ...... del mes ...... del año .......\nManifiesto que jamás estuvimos separados de hecho y que el domicilio conyugal siempre feu en calle .........\nEl cambio de domicilio no se realizó por motivos .........."
+    "declaracion": "Me encontraba casada legalmente con el señor/a ..., DNI: ..., durante ... años, hasta la fecha de su fallecimiento ocurrido el día ... del mes ... del año ...\nManifiesto que jamás estuvimos separados de hecho y que el domicilio conyugal siempre fue en ... .\nEl cambio de domicilio no se realizó por motivos ..."
+  },
+  {
+    "icon": "bi-car-front-fill",
+    "titulo": "Accidente de tránsito sin seguro",
+    "declaracion": "El día ... del mes ... del año ..., a las aproximadamente ... horas, me encontraba circulando en la motocicleta/automóvil marca ..., modelo ..., patente ..., de mi propiedad, por la calle ... de esta ciudad, cuando sufrí un accidente/siniestro.\nAsimismo manifiesto que al momento de ocurrido el hecho, el mencionado vehículo no contaba con póliza de seguro vigente."
+  },
+  {
+    "icon": "bi-person-hearts",
+    "titulo": "Concubinato sin testigos",
+    "declaracion": "Convivo en unión de hecho (concubinato) con el/la Sr./Sra. ..., D.N.I. N° ..., hace ... años.\nAsimismo, manifiesto que jamás estuvimos separados de hecho y que el domicilio conyugal siempre fue en ... ."
+  },
+  {
+    "icon": "bi-geo-alt-fill",
+    "titulo": "Domicilio actual sin testigos",
+    "declaracion": "Resido en forma permanente en el domicilio ubicado en ... N° ..., Barrio ..., de la ciudad de Presidencia Roque Sáenz Peña, Provincia del Chaco, hace ... años."
+  },
+  {
+    "icon": "bi-card-heading",
+    "titulo": "Extravío de la Chapa Patente de un Vehículo",
+    "declaracion": "Extravié en la vía pública la chapa patente de mi motocicleta marca ..., modelo ..., dominio ..., motor N° ..., cuadro/chasis N° ..., Color ..., de mi propiedad.\nAsimismo declaro que la pérdida ocurrió el día ... del mes de ... del año ..., aproximadamente en la zona de ... de esta ciudad."
   }
 ]
